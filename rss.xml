@@ -1,11 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Our Company Insights</title>
+    <title>Managed IT, Cloud &amp; Strategic IT Insights</title>
     <link>https://BuiltByVeterans.ai/insights</link>
-    <description>Insights from Our Company</description>
+    <description>Insights from Managed IT, Cloud &amp; Strategic IT</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jul 2026 18:34:31 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 22:08:57 GMT</lastBuildDate>
     <atom:link href="https://BuiltByVeterans.ai/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>manage IT downtime</title>
+      <link>https://BuiltByVeterans.ai/articles/manage-it-downtime</link>
+      <guid>https://BuiltByVeterans.ai/articles/manage-it-downtime</guid>
+      <description></description>
+      <pubDate>Sat, 11 Jul 2026 22:08:51 GMT</pubDate>
+      <category>Business</category>
+    </item>
   </channel>
 </rss>
