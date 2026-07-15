@@ -1,6 +1,9 @@
 [build]
-  publish = "."
+  # No build command needed — static site deployed via API
+  # This config just tells Netlify where the functions live
+  # so git-linked deploys can also pick them up
   functions = "netlify/functions"
 
 [functions]
+  # Single-file JS functions, no bundling needed
   node_bundler = "esbuild"
