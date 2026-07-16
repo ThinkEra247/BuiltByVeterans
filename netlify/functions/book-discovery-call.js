@@ -46,9 +46,10 @@ exports.handler = async (event) => {
       };
     }
 
+    // Calendly requires last_name to be non-empty
     const nameParts = name.trim().split(/\s+/);
     const firstName = nameParts[0] || name;
-    const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
+    const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : nameParts[0];
 
     const inviteePayload = {
       event_type: CALENDLY_EVENT_URI,
