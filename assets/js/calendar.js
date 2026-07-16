@@ -3,7 +3,6 @@
  * Fetches available times from Calendly API via local proxy
  * and renders a branded dark-themed calendar.
  */
-
 (function () {
   'use strict';
 
@@ -20,17 +19,14 @@
   let calendarEl, monthLabel, gridEl, slotsEl, slotsListEl;
 
   // ─── Initialize ─────────────────────────────────────────────────────────────
-
   function init() {
     calendarEl = document.getElementById('bvv-calendar');
     if (!calendarEl) return;
-
     render();
     fetchMonth(currentDate);
   }
 
   // ─── Render Calendar Shell ──────────────────────────────────────────────────
-
   function render() {
     calendarEl.innerHTML = `
       <div class="bvv-cal-header">
@@ -79,11 +75,9 @@
   }
 
   // ─── Render Month Grid ──────────────────────────────────────────────────────
-
   function renderGrid() {
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth();
-
     monthLabel.textContent = `${getMonthName(month)} ${year}`;
 
     const firstDay = new Date(year, month, 1).getDay();
@@ -129,7 +123,6 @@
   }
 
   // ─── Show Time Slots ────────────────────────────────────────────────────────
-
   function showSlots(dateStr) {
     const slots = availableSlots[dateStr] || [];
     if (slots.length === 0) {
@@ -160,7 +153,6 @@
   }
 
   // ─── Booking Form ───────────────────────────────────────────────────────────
-
   function showBookingForm(dateStr, slotTime) {
     const time = new Date(slotTime);
     const timeLabel = time.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
@@ -205,57 +197,54 @@
       fetchMonth(currentDate);
     });
 
-    // Form submit — book via Calendly Scheduling API
+    // Form submit — redirect to Calendly with prefilled info
     document.getElementById('bvv-booking-form').addEventListener('submit', async (e) => {
       e.preventDefault();
-      const name = document.getElementById('bvv-name').value;
-      const email = document.getElementById('bvv-email').value;
+
+      const name = document.getElementById('bvv-name').value.trim();
+      const email = document.getElementById('bvv-email').value.trim();
       const orgType = document.querySelector('input[name="org_type"]:checked');
       const submitBtn = calendarEl.querySelector('.bvv-cal-submit');
 
-      // Disable button while submitting
+      // Disable button while processing
       submitBtn.textContent = 'Booking...';
       submitBtn.disabled = true;
 
       try {
-        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'America/Chicago';
+        // Build Calendly URL with prefilled params and selected time
+        // Calendly accepts: name, email, a1 (first custom question answer)
+        // and month/date/time in the URL path
+        const slotDate = new Date(slotTime);
+        const year = slotDate.getFullYear();
+        const month = String(slotDate.getMonth() + 1).padStart(2, '0');
+        const day = String(slotDate.getDate()).padStart(2, '0');
+        const hours = String(slotDate.getHours()).padStart(2, '0');
+        const minutes = String(slotDate.getMinutes()).padStart(2, '0');
 
-        const res = await fetch('/.netlify/functions/book-discovery-call', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name: name,
-            email: email,
-            org_type: orgType ? orgType.value : '',
-            start_time: slotTime,
-            timezone: timezone
-          })
-        });
-
-        const result = await res.json();
-
-        if (res.ok && result.success) {
-          // Show success confirmation
-          const timeDisplay = new Date(slotTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
-          const dateDisplay = new Date(slotTime).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
-
-          calendarEl.innerHTML = `
-            <div class="bvv-cal-confirmation">
-              <div class="bvv-cal-check">✓</div>
-              <h3>Discovery Call Booked!</h3>
-              <p>A confirmation has been sent to <strong>${email}</strong></p>
-              <p class="bvv-cal-confirm-details">${dateDisplay} at ${timeDisplay}</p>
-              <p style="color:var(--text-muted);font-size:13px;margin-top:16px">You'll receive a calendar invite with Google Meet details shortly.</p>
-              <button class="bvv-cal-back" style="margin-top:20px" onclick="location.reload()">← Schedule Another</button>
-            </div>
-          `;
-        } else {
-          // Show error
-          submitBtn.textContent = 'Schedule Discovery Call →';
-          submitBtn.disabled = false;
-          const errorMsg = result.details ? JSON.stringify(result.details) : (result.error || 'Something went wrong. Please try again.');
-          alert('Booking error: ' + errorMsg);
+        // Calendly scheduling link format with prefilled data
+        let calendlyUrl = `${CALENDLY_BOOKING_URL}/${year}-${month}-${day}T${hours}:${minutes}:00`;
+        const params = new URLSearchParams();
+        params.set('name', name);
+        params.set('email', email);
+        if (orgType) {
+          params.set('a1', orgType.value);
         }
+        calendlyUrl += '?' + params.toString();
+
+        // Open Calendly in new tab to complete booking
+        window.open(calendlyUrl, '_blank');
+
+        // Show confirmation
+        calendarEl.innerHTML = `
+          <div class="bvv-cal-confirmation">
+            <div class="bvv-cal-check">✓</div>
+            <h3>Almost Done!</h3>
+            <p>A Calendly tab has opened to confirm your booking.</p>
+            <p class="bvv-cal-confirm-details">${dateLabel} at ${timeLabel}</p>
+            <p style="color:var(--text-muted);font-size:13px;margin-top:16px">Complete the booking in the Calendly tab. You'll receive a calendar invite with meeting details.</p>
+            <button class="bvv-cal-back" style="margin-top:20px" onclick="location.reload()">← Schedule Another</button>
+          </div>
+        `;
       } catch (err) {
         console.error('Booking failed:', err);
         submitBtn.textContent = 'Schedule Discovery Call →';
@@ -265,8 +254,7 @@
     });
   }
 
-  // ─── Fetch Available Times ──────────────────────────────────────────────────
-
+  // ─── Fetch Available Times ────────────────────────────────────────────────────
   async function fetchMonth(date) {
     const year = date.getFullYear();
     const month = date.getMonth();
@@ -318,8 +306,7 @@
     renderGrid();
   }
 
-  // ─── Helpers ────────────────────────────────────────────────────────────────
-
+  // ─── Helpers ──────────────────────────────────────────────────────────────────
   function getMonthName(month) {
     return ['January', 'February', 'March', 'April', 'May', 'June',
       'July', 'August', 'September', 'October', 'November', 'December'][month];
@@ -335,12 +322,10 @@
     }
   }
 
-  // ─── Boot ───────────────────────────────────────────────────────────────────
-
+  // ─── Boot ─────────────────────────────────────────────────────────────────────
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }
-
 })();
