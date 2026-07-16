@@ -63,6 +63,9 @@ exports.handler = async (event) => {
         email: email,
         timezone: timezone || "America/Chicago",
       },
+      location: {
+        kind: "google_conference"
+      }
     };
 
     // Add org_type as a question/answer if provided
