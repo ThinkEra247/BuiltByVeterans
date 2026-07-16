@@ -192,7 +192,7 @@
               <label><input type="radio" name="org_type" value="Other"> Other</label>
             </div>
           </div>
-          <input type="hidden" name="slot_time" value="${slotTime}">
+          <input type="hidden" name="start_time" value="${slotTime}">
           <input type="hidden" name="slot_date" value="${dateStr}">
           <button type="submit" class="bvv-cal-submit">Schedule Discovery Call →</button>
         </form>
@@ -227,7 +227,7 @@
             name: name,
             email: email,
             org_type: orgType ? orgType.value : '',
-            slot_time: slotTime,
+            start_time: slotTime,
             timezone: timezone
           })
         });
