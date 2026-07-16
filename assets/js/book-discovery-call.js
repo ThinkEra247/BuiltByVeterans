@@ -2,6 +2,7 @@
 // Endpoint: /.netlify/functions/book-discovery-call
 //
 // Uses POST /invitees (Calendly Scheduling API) to create a booking.
+// Returns detailed error info for debugging.
 
 exports.handler = async (event) => {
   const headers = {
@@ -36,7 +37,6 @@ exports.handler = async (event) => {
 
   try {
     const body = JSON.parse(event.body || "{}");
-
     const { start_time, name, email, timezone, org_type } = body;
 
     if (!start_time || !name || !email) {
@@ -84,17 +84,28 @@ exports.handler = async (event) => {
       body: JSON.stringify(inviteePayload),
     });
 
+    const responseText = await response.text();
+
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error("Calendly booking error:", response.status, errorText);
+      // Return full debug info to the frontend
       return {
         statusCode: response.status,
         headers,
-        body: JSON.stringify({ error: "Calendly booking failed", details: errorText }),
+        body: JSON.stringify({
+          error: "Calendly booking failed",
+          status: response.status,
+          details: responseText,
+          debug: {
+            endpoint: "https://api.calendly.com/invitees",
+            method: "POST",
+            payload_sent: inviteePayload,
+            token_prefix: CALENDLY_TOKEN.substring(0, 8) + "...",
+          }
+        }),
       };
     }
 
-    const data = await response.json();
+    const data = JSON.parse(responseText);
 
     return {
       statusCode: 200,
@@ -107,7 +118,6 @@ exports.handler = async (event) => {
       }),
     };
   } catch (error) {
-    console.error("Booking function error:", error);
     return {
       statusCode: 500,
       headers,
