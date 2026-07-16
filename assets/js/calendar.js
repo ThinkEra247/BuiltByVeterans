@@ -241,11 +241,10 @@
             </div>
           `;
         } else {
-          // Show error
+          // Show full debug info
           submitBtn.textContent = 'Schedule Discovery Call →';
           submitBtn.disabled = false;
-          const errorMsg = result.details || result.error || 'Something went wrong. Please try again.';
-          alert('Booking error: ' + errorMsg);
+          alert('DEBUG: ' + JSON.stringify(result, null, 2));
         }
       } catch (err) {
         console.error('Booking failed:', err);

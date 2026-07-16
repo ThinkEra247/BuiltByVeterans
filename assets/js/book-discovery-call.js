@@ -1,8 +1,5 @@
 // Netlify Function: Book a discovery call via Calendly Scheduling API
-// Endpoint: /.netlify/functions/book-discovery-call
-//
-// Uses POST /invitees (Calendly Scheduling API) to create a booking.
-// Returns detailed error info for debugging.
+// DEBUG VERSION — returns full error details in response
 
 exports.handler = async (event) => {
   const headers = {
@@ -47,12 +44,10 @@ exports.handler = async (event) => {
       };
     }
 
-    // Split name into first/last
     const nameParts = name.trim().split(/\s+/);
     const firstName = nameParts[0] || name;
     const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
 
-    // Build request body for Calendly Scheduling API (POST /invitees)
     const inviteePayload = {
       event_type: CALENDLY_EVENT_URI,
       start_time: start_time,
@@ -68,7 +63,6 @@ exports.handler = async (event) => {
       }
     };
 
-    // Add org_type as a question/answer if provided
     if (org_type) {
       inviteePayload.questions_and_answers = [
         { question: "What type of organization are you?", answer: org_type, position: 0 }
@@ -87,20 +81,17 @@ exports.handler = async (event) => {
     const responseText = await response.text();
 
     if (!response.ok) {
-      // Return full debug info to the frontend
+      // Return everything so we can see it in the alert
       return {
-        statusCode: response.status,
+        statusCode: 200,
         headers,
         body: JSON.stringify({
-          error: "Calendly booking failed",
-          status: response.status,
-          details: responseText,
-          debug: {
-            endpoint: "https://api.calendly.com/invitees",
-            method: "POST",
-            payload_sent: inviteePayload,
-            token_prefix: CALENDLY_TOKEN.substring(0, 8) + "...",
-          }
+          success: false,
+          error: "Calendly API returned " + response.status,
+          calendly_response: responseText,
+          request_sent: inviteePayload,
+          token_starts_with: CALENDLY_TOKEN.substring(0, 10),
+          event_type_uri: CALENDLY_EVENT_URI
         }),
       };
     }
@@ -113,15 +104,13 @@ exports.handler = async (event) => {
       body: JSON.stringify({
         success: true,
         booking: data,
-        reschedule_url: data.resource?.reschedule_url || null,
-        cancel_url: data.resource?.cancel_url || null,
       }),
     };
   } catch (error) {
     return {
-      statusCode: 500,
+      statusCode: 200,
       headers,
-      body: JSON.stringify({ error: "Failed to book discovery call", details: error.message }),
+      body: JSON.stringify({ success: false, error: "Function error: " + error.message }),
     };
   }
 };
