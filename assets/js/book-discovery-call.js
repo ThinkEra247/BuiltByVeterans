@@ -1,5 +1,7 @@
 // Netlify Function: Book a discovery call via Calendly Scheduling API
-// DEBUG VERSION — returns full error details in response
+// Endpoint: /.netlify/functions/book-discovery-call
+// Uses POST /invitees with google_conference location
+// v2.0 - Fixed endpoint and location
 
 exports.handler = async (event) => {
   const headers = {
