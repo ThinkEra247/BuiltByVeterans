@@ -7,12 +7,11 @@
   'use strict';
 
   const API_BASE = '/.netlify/functions/calendly-available-times';
-  const CALENDLY_BOOKING_URL = 'https://calendly.com/builtbyveterans/evertrust-discovery-call-45-minutes-clone';
 
   // State
   let currentDate = new Date();
   let selectedDate = null;
-  let availableSlots = {}; // { 'YYYY-MM-DD': ['09:00', '09:30', ...] }
+  let availableSlots = {}; // { 'YYYY-MM-DD': [slot, ...] }
   let isLoading = false;
 
   // DOM references
@@ -185,7 +184,6 @@
             </div>
           </div>
           <input type="hidden" name="start_time" value="${slotTime}">
-          <input type="hidden" name="slot_date" value="${dateStr}">
           <button type="submit" class="bvv-cal-submit">Schedule Discovery Call →</button>
         </form>
       </div>
@@ -197,7 +195,7 @@
       fetchMonth(currentDate);
     });
 
-    // Form submit — redirect to Calendly with prefilled info
+    // Form submit — book via Calendly Scheduling API (POST /invitees)
     document.getElementById('bvv-booking-form').addEventListener('submit', async (e) => {
       e.preventDefault();
 
@@ -206,45 +204,49 @@
       const orgType = document.querySelector('input[name="org_type"]:checked');
       const submitBtn = calendarEl.querySelector('.bvv-cal-submit');
 
-      // Disable button while processing
+      // Disable button while submitting
       submitBtn.textContent = 'Booking...';
       submitBtn.disabled = true;
 
       try {
-        // Build Calendly URL with prefilled params and selected time
-        // Calendly accepts: name, email, a1 (first custom question answer)
-        // and month/date/time in the URL path
-        const slotDate = new Date(slotTime);
-        const year = slotDate.getFullYear();
-        const month = String(slotDate.getMonth() + 1).padStart(2, '0');
-        const day = String(slotDate.getDate()).padStart(2, '0');
-        const hours = String(slotDate.getHours()).padStart(2, '0');
-        const minutes = String(slotDate.getMinutes()).padStart(2, '0');
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'America/Chicago';
 
-        // Calendly scheduling link format with prefilled data
-        let calendlyUrl = `${CALENDLY_BOOKING_URL}/${year}-${month}-${day}T${hours}:${minutes}:00`;
-        const params = new URLSearchParams();
-        params.set('name', name);
-        params.set('email', email);
-        if (orgType) {
-          params.set('a1', orgType.value);
+        const res = await fetch('/.netlify/functions/book-discovery-call', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            start_time: slotTime,
+            name: name,
+            email: email,
+            timezone: timezone,
+            org_type: orgType ? orgType.value : ''
+          })
+        });
+
+        const result = await res.json();
+
+        if (res.ok && result.success) {
+          // Show success confirmation
+          const timeDisplay = new Date(slotTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+          const dateDisplay = new Date(slotTime).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+
+          calendarEl.innerHTML = `
+            <div class="bvv-cal-confirmation">
+              <div class="bvv-cal-check">✓</div>
+              <h3>Discovery Call Booked!</h3>
+              <p>A confirmation has been sent to <strong>${email}</strong></p>
+              <p class="bvv-cal-confirm-details">${dateDisplay} at ${timeDisplay}</p>
+              <p style="color:var(--text-muted);font-size:13px;margin-top:16px">You'll receive a calendar invite with meeting details shortly.</p>
+              <button class="bvv-cal-back" style="margin-top:20px" onclick="location.reload()">← Schedule Another</button>
+            </div>
+          `;
+        } else {
+          // Show error
+          submitBtn.textContent = 'Schedule Discovery Call →';
+          submitBtn.disabled = false;
+          const errorMsg = result.details || result.error || 'Something went wrong. Please try again.';
+          alert('Booking error: ' + errorMsg);
         }
-        calendlyUrl += '?' + params.toString();
-
-        // Open Calendly in new tab to complete booking
-        window.open(calendlyUrl, '_blank');
-
-        // Show confirmation
-        calendarEl.innerHTML = `
-          <div class="bvv-cal-confirmation">
-            <div class="bvv-cal-check">✓</div>
-            <h3>Almost Done!</h3>
-            <p>A Calendly tab has opened to confirm your booking.</p>
-            <p class="bvv-cal-confirm-details">${dateLabel} at ${timeLabel}</p>
-            <p style="color:var(--text-muted);font-size:13px;margin-top:16px">Complete the booking in the Calendly tab. You'll receive a calendar invite with meeting details.</p>
-            <button class="bvv-cal-back" style="margin-top:20px" onclick="location.reload()">← Schedule Another</button>
-          </div>
-        `;
       } catch (err) {
         console.error('Booking failed:', err);
         submitBtn.textContent = 'Schedule Discovery Call →';
@@ -275,11 +277,10 @@
       startDate = new Date(year, month, 1);
     }
 
-    const startTime = startDate.toISOString();
-    const endTime = new Date(year, month + 1, 0, 23, 59, 59).toISOString();
-
     isLoading = true;
     renderGrid(); // Show grid while loading
+
+    const endTime = new Date(year, month + 1, 0, 23, 59, 59).toISOString();
 
     try {
       const res = await fetch(`${API_BASE}?start_time=${encodeURIComponent(startDate.toISOString())}&end_time=${encodeURIComponent(endTime)}`);
