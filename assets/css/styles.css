@@ -1911,7 +1911,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 
 /* ===== TRUST METRICS SECTION ===== */
 .trust-metrics-section {
-  padding: 80px 0 64px;
+  padding: 56px 0 40px;
   text-align: center;
 }
 .trust-metrics-heading {
@@ -1926,7 +1926,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   font-size: 16px;
   line-height: 1.7;
   max-width: 700px;
-  margin: 0 auto 48px;
+  margin: 0 auto 32px;
 }
 
 /* Metric Cards */
@@ -1939,7 +1939,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   background: var(--bg-secondary);
   border: 1px solid rgba(255, 255, 255, .07);
   border-radius: 16px;
-  padding: 32px 24px;
+  padding: 24px 20px;
   text-align: left;
   transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
@@ -1993,7 +1993,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 
 /* ===== TECHNOLOGIES WE SUPPORT ===== */
 .tech-section {
-  padding: 100px 0 96px;
+  padding: 56px 0 56px;
   text-align: center;
 }
 .tech-heading {
@@ -2006,7 +2006,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 .tech-copy {
   color: var(--text-muted);
   font-size: 16px;
-  margin: 0 auto 56px;
+  margin: 0 auto 36px;
   max-width: 520px;
 }
 .tech-grid {
@@ -2019,7 +2019,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   background: var(--bg-secondary);
   border: 1px solid rgba(255, 255, 255, .07);
   border-radius: 18px;
-  padding: 36px 30px 28px;
+  padding: 28px 24px 22px;
   display: flex;
   flex-direction: column;
   transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
@@ -2142,7 +2142,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 
 /* ===== BOTTOM CTA BAR ===== */
 .bottom-cta-section {
-  padding: 0 0 64px;
+  padding: 0 0 48px;
 }
 .bottom-cta-bar {
   display: flex;

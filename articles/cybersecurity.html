@@ -1,4 +1,4 @@
-Ôªø<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -64,7 +64,7 @@
   --transition-base: 250ms ease;
   --transition-slow: 400ms ease;
 
-  /* Legacy mappings ‚Äî keep existing selectors working until fully migrated */
+  /* Legacy mappings ó keep existing selectors working until fully migrated */
   --bg: var(--bg-primary);
   --panel: var(--bg-secondary);
   --panel2: var(--bg-panel);
@@ -344,7 +344,7 @@ textarea:focus-visible,
 .service-block p{color:#aeb8c7;line-height:1.7}
 .service-features{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:12px}
 .service-features li{color:#d5dbe5;font-size:15px;padding-left:20px;position:relative}
-.service-features li:before{content:"‚óè";color:#54d887;position:absolute;left:0;font-size:10px;top:3px}
+.service-features li:before{content:"?";color:#54d887;position:absolute;left:0;font-size:10px;top:3px}
 .partner-logos{display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap;margin-top:32px;color:#8e9aab;font-size:15px;font-weight:700}
 .process-steps{display:flex;align-items:flex-start;justify-content:center;gap:12px;margin-top:40px}
 .process-step{text-align:center;max-width:160px}
@@ -512,7 +512,7 @@ textarea:focus-visible,
   color:var(--text-primary);
 }
 .services-page .check:before{
-  content:"‚úì";
+  content:"?";
   display:inline-grid;
   place-items:center;
   width:18px;
@@ -641,7 +641,7 @@ textarea:focus-visible,
 .service-description{font-size:1.05rem;line-height:1.8;color:var(--text-muted);margin-bottom:25px;}
 .service-list{list-style:none;padding:0;margin:0;}
 .service-list li{position:relative;padding-left:28px;margin-bottom:14px;color:var(--text-muted);font-weight:500;}
-.service-list li::before{content:"‚úì";position:absolute;left:0;color:var(--brand);font-weight:700;}
+.service-list li::before{content:"?";position:absolute;left:0;color:var(--brand);font-weight:700;}
 .btn-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--brand);text-decoration:none;transition:.25s;}
 .btn-link:hover{color:var(--brand-hover);}
 .strategic-dashboard{max-width:100%;border-radius:18px;filter:drop-shadow(0 30px 60px rgba(0,0,0,.15));}
@@ -1002,7 +1002,7 @@ textarea:focus-visible,
 .faq-item summary{padding:20px 24px;font-weight:700;font-size:15px;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;}
 .faq-item summary::-webkit-details-marker{display:none;}
 .faq-item summary::after{content:"+";font-size:20px;color:var(--text-muted);font-weight:400;}
-.faq-item[open] summary::after{content:"‚àí";}
+.faq-item[open] summary::after{content:"-";}
 .faq-item p{padding:0 24px 20px;font-size:15px;color:var(--text-muted);line-height:1.7;margin:0;}
 .ind-cta{background:#05070b;color:#fff;border-radius:14px;padding:60px;text-align:center;}
 .ind-cta h2{font-size:clamp(28px,3.5vw,42px);margin:0 0 14px;}
@@ -1516,7 +1516,7 @@ textarea:focus-visible,
   transform: translateY(0);
 }
 
-/* Lift effect ‚Äî subtle upward hover shift */
+/* Lift effect ó subtle upward hover shift */
 .lift {
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
@@ -1524,7 +1524,7 @@ textarea:focus-visible,
   transform: translateY(-4px);
 }
 
-/* Glow effect ‚Äî box-shadow pulse on hover */
+/* Glow effect ó box-shadow pulse on hover */
 .glow {
   transition: box-shadow var(--transition-base);
 }
@@ -1532,7 +1532,7 @@ textarea:focus-visible,
   box-shadow: 0 0 20px rgba(183, 14, 24, 0.25);
 }
 
-/* Scale effect ‚Äî subtle scale on hover */
+/* Scale effect ó subtle scale on hover */
 .scale {
   transition: transform var(--transition-base);
 }
@@ -1540,7 +1540,7 @@ textarea:focus-visible,
   transform: scale(1.03);
 }
 
-/* Prefers reduced motion ‚Äî disable animations for accessibility */
+/* Prefers reduced motion ó disable animations for accessibility */
 @media (prefers-reduced-motion: reduce) {
   .fade-in {
     opacity: 1;
@@ -1586,10 +1586,10 @@ textarea:focus-visible,
 }
 
 
-/* ===== HOMEPAGE ‚Äî NAV CTA OUTLINE ===== */
-/* nav-cta outline class no longer needed ‚Äî base nav-cta is already outline style */
+/* ===== HOMEPAGE ó NAV CTA OUTLINE ===== */
+/* nav-cta outline class no longer needed ó base nav-cta is already outline style */
 
-/* ===== HOMEPAGE ‚Äî HERO OVERRIDES ===== */
+/* ===== HOMEPAGE ó HERO OVERRIDES ===== */
 .hero {
   min-height: auto;
   padding: 0;
@@ -1644,7 +1644,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   font-size: 12px;
 }
 
-/* ===== HOMEPAGE ‚Äî TRUST BAR (full-width section) ===== */
+/* ===== HOMEPAGE ó TRUST BAR (full-width section) ===== */
 .trust-bar {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border);
@@ -1652,7 +1652,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   padding: 20px 0;
 }
 
-/* ===== HOMEPAGE ‚Äî TRUST INDICATORS (no card, just flex row) ===== */
+/* ===== HOMEPAGE ó TRUST INDICATORS (no card, just flex row) ===== */
 .trust-strip {
   display: flex;
   align-items: center;
@@ -1698,7 +1698,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   line-height: 1.2;
 }
 
-/* ===== HOMEPAGE ‚Äî BELOW HERO TWO-COLUMN ===== */
+/* ===== HOMEPAGE ó BELOW HERO TWO-COLUMN ===== */
 .homepage-content {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -1707,7 +1707,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   padding: 32px 0 36px;
 }
 
-/* ===== HOMEPAGE ‚Äî SERVICES COL ===== */
+/* ===== HOMEPAGE ó SERVICES COL ===== */
 .services-col {
   background: var(--bg-panel);
   border: 1px solid var(--border);
@@ -1721,7 +1721,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   margin: 0 0 4px;
 }
 
-/* ===== HOMEPAGE ‚Äî SERVICES GRID 6-col ===== */
+/* ===== HOMEPAGE ó SERVICES GRID 6-col ===== */
 .services-grid-6 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -1729,7 +1729,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   margin-top: 16px;
 }
 
-/* ===== HOMEPAGE ‚Äî SMALL SERVICE CARD ===== */
+/* ===== HOMEPAGE ó SMALL SERVICE CARD ===== */
 .service-card-sm {
   background: var(--bg-panel);
   border: 1px solid var(--border);
@@ -1792,7 +1792,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   color: var(--brand-hover);
 }
 
-/* ===== HOMEPAGE ‚Äî VIEW ALL SERVICES BTN ===== */
+/* ===== HOMEPAGE ó VIEW ALL SERVICES BTN ===== */
 .btn.outline-brand {
   background: transparent;
   border: 1px solid var(--border);
@@ -1807,14 +1807,14 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   color: var(--brand);
 }
 
-/* ===== HOMEPAGE ‚Äî RIGHT COLUMN ===== */
+/* ===== HOMEPAGE ó RIGHT COLUMN ===== */
 .right-col {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-/* ===== HOMEPAGE ‚Äî INDUSTRIES PANEL ===== */
+/* ===== HOMEPAGE ó INDUSTRIES PANEL ===== */
 .industries-panel {
   background: var(--bg-panel);
   border: 1px solid var(--border);
@@ -1870,7 +1870,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   color: var(--brand);
 }
 
-/* ===== HOMEPAGE ‚Äî STATS PANEL ===== */
+/* ===== HOMEPAGE ó STATS PANEL ===== */
 .stats-panel {
   background: var(--bg-panel);
   border: 1px solid var(--border);
@@ -1927,7 +1927,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   line-height: 1.3;
 }
 
-/* ===== HOMEPAGE ‚Äî CLIENT LOGOS ===== */
+/* ===== HOMEPAGE ó CLIENT LOGOS ===== */
 .client-logos {
   background: var(--bg-secondary);
   padding: 32px 0;
@@ -1961,7 +1961,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   font-style: italic;
 }
 
-/* ===== HOMEPAGE ‚Äî RESPONSIVE ===== */
+/* ===== HOMEPAGE ó RESPONSIVE ===== */
 @media (max-width: 900px) {
   .hero-inner {
     grid-template-columns: 1fr;
@@ -2024,7 +2024,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
    Scope: .ind-page
 ========================================================= */
 
-/* Hero layout override for industries ‚Äî text only, no right column */
+/* Hero layout override for industries ó text only, no right column */
 .ind-page .hero {
   background: radial-gradient(circle at 75% 30%, rgba(183,14,24,.14), transparent 45%),
               linear-gradient(135deg, #050505, #101114);
@@ -2744,7 +2744,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   gap: 8px;
 }
 .discovery-checklist span::before {
-  content: "‚úì";
+  content: "?";
   display: inline-grid;
   place-items: center;
   width: 18px;
@@ -3030,7 +3030,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 
 /* =========================================================
    CUSTOM CALENDAR COMPONENT
-   Built By Veterans ‚Äî Discovery Call Booking
+   Built By Veterans ó Discovery Call Booking
 ========================================================= */
 
 #bvv-calendar {
@@ -3376,7 +3376,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </style>
   <style>
     body { background: #05070b !important; color: #e2e8f0; overflow-x: hidden; margin: 0; padding: 0; }
-    /* Minimal fallback for .site-header wrapper ‚Äî only used when nav_html is a bare <nav> without its own header.
+    /* Minimal fallback for .site-header wrapper ó only used when nav_html is a bare <nav> without its own header.
        These styles yield to the site's actual CSS (no !important, low specificity). */
     .site-header { width: 100%; position: relative; z-index: 100; }
     .site-header__inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; gap: 2rem; }
@@ -3568,22 +3568,22 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   </script>
 </head>
 <body style="background:#05070b !important; color:#e2e8f0; min-height:100vh;">
-  <header class="top" data-nav-transparent><div class="container nav"><a class='brand' href='https://BuiltByVeterans.ai/'><img src="https://BuiltByVeterans.ai/assets/img/logo-cropped.png" alt="Built By Veterans" ></a><nav class="links"><a href='https://BuiltByVeterans.ai/services'>Services</a><a href='https://BuiltByVeterans.ai/industries'>Industries</a><a href='https://BuiltByVeterans.ai/about'>About Us</a><a href='https://BuiltByVeterans.ai/resources'>Resources</a></nav><button class="menu-toggle" aria-label="Open menu" onclick="document.querySelector('.mobile-nav').classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button><a class='nav-cta outline' href='https://BuiltByVeterans.ai/contact'><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Schedule a Discovery Call <span class="arrow">‚Üí</span></a></div></header>
+  <header class="top" data-nav-transparent><div class="container nav"><a class='brand' href='https://BuiltByVeterans.ai/'><img src="https://BuiltByVeterans.ai/assets/img/logo-cropped.png" alt="Built By Veterans" ></a><nav class="links"><a href='https://BuiltByVeterans.ai/services'>Services</a><a href='https://BuiltByVeterans.ai/industries'>Industries</a><a href='https://BuiltByVeterans.ai/about'>About Us</a><a href='https://BuiltByVeterans.ai/resources'>Resources</a></nav><button class="menu-toggle" aria-label="Open menu" onclick="document.querySelector('.mobile-nav').classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button><a class='nav-cta outline' href='https://BuiltByVeterans.ai/contact'><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Schedule a Discovery Call <span class="arrow">?</span></a></div></header>
   <main class="article-page">
     <div class="container">
       <div class="article-hero">
-        <a class="article-back" href="/resources">‚Üê Back to Resources</a>
+        <a class="article-back" href="/resources">? Back to Resources</a>
         <div class="article-label">Business</div>
         <h1>Cybersecurity</h1>
         <p class="lead"></p>
       </div>
       <div class="article-featured-image"><img src="/images/articles/featured-b41f585ffa59486e90496786ebbb965b.png" alt="Cybersecurity" loading="lazy" /></div>
       <div class="article-body">
-<div class="last-verified">‚úì Content verified: July 2026</div>
+<div class="last-verified">? Content verified: July 2026</div>
         <h2 id="executive-summary">Executive Summary</h2>
-<p>This guide delivers a comprehensive, real-world blueprint for mastering cybersecurity‚Äîaddressing the persistent business risks, operational inefficiencies, and compliance burdens organizations face right now. Cyber threats aren‚Äôt slowing down; they‚Äôre evolving, and attackers are targeting small and mid-size businesses as aggressively as enterprises. In this article, you‚Äôll gain:</p>
+<p>This guide delivers a comprehensive, real-world blueprint for mastering cybersecurityóaddressing the persistent business risks, operational inefficiencies, and compliance burdens organizations face right now. Cyber threats arenít slowing down; theyíre evolving, and attackers are targeting small and mid-size businesses as aggressively as enterprises. In this article, youíll gain:</p>
 <ul>
-<li>A proprietary SenseiSupport Cybersecurity Score‚Ñ¢ framework to assess your security posture</li>
+<li>A proprietary SenseiSupport Cybersecurity Scoreô framework to assess your security posture</li>
 <li>Concrete, step-by-step implementation plans with real configurations and tools</li>
 <li>Industry-specific case studies (dental, legal, healthcare, accounting/manufacturing)</li>
 <li>Actionable checklists, decision frameworks, and maturity models for continuous improvement</li>
@@ -3592,15 +3592,15 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <p>This resource is designed for business owners, COOs, IT managers, and compliance officers who demand operational security without hype or fluff.</p>
 <hr />
 <h2 id="introduction">Introduction</h2>
-<p>Your IT team is overwhelmed with endless alerts, patching is always behind, and users still fall for phishing emails. Compliance audits feel like fire drills, not routine checks. Every week, another business in your network is hit by ransomware, and you‚Äôre left wondering if your critical data is truly protected‚Äîor just ‚Äúbacked up‚Äù in name only.</p>
-<p>These problems aren‚Äôt just technical headaches. They result in hours of lost productivity, six-figure costs from downtime or data loss, and regulatory fines that could cripple your business. Worse, a single undetected breach can erode client trust overnight, especially in regulated industries like dental, healthcare, legal, and accounting.</p>
-<p>Here‚Äôs the reality: attackers don‚Äôt care how big you are, what you do, or how hard your team works. They automate, they scale, and they adapt. The solution? A proactive, business-aligned cybersecurity strategy‚Äîbuilt on automation, Zero Trust, compliance, and continuous improvement. This guide gives you the exact frameworks, tools, and operational tactics we use to protect and modernize client environments.</p>
+<p>Your IT team is overwhelmed with endless alerts, patching is always behind, and users still fall for phishing emails. Compliance audits feel like fire drills, not routine checks. Every week, another business in your network is hit by ransomware, and youíre left wondering if your critical data is truly protectedóor just ìbacked upî in name only.</p>
+<p>These problems arenít just technical headaches. They result in hours of lost productivity, six-figure costs from downtime or data loss, and regulatory fines that could cripple your business. Worse, a single undetected breach can erode client trust overnight, especially in regulated industries like dental, healthcare, legal, and accounting.</p>
+<p>Hereís the reality: attackers donít care how big you are, what you do, or how hard your team works. They automate, they scale, and they adapt. The solution? A proactive, business-aligned cybersecurity strategyóbuilt on automation, Zero Trust, compliance, and continuous improvement. This guide gives you the exact frameworks, tools, and operational tactics we use to protect and modernize client environments.</p>
 <blockquote>
-<p><strong>üìã Free Cybersecurity Readiness Assessment</strong> ‚Äî includes infrastructure audit, risk scoring, and a 90-day action plan. Our team evaluates your environment against 15 critical criteria and delivers a prioritized roadmap. [Get your assessment ‚Üí]</p>
+<p><strong>?? Free Cybersecurity Readiness Assessment</strong> ó includes infrastructure audit, risk scoring, and a 90-day action plan. Our team evaluates your environment against 15 critical criteria and delivers a prioritized roadmap. [Get your assessment ?]</p>
 </blockquote>
 <hr />
-<h2 id="senseisupport-cybersecurity-scoretm-framework">SenseiSupport Cybersecurity Score‚Ñ¢ Framework</h2>
-<p>The <strong>SenseiSupport Cybersecurity Score‚Ñ¢</strong> is our proprietary scoring system to benchmark your organization‚Äôs cybersecurity posture. We‚Äôve built this on 15+ years of managed IT experience, <a href="https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final" target="_blank" rel="noopener noreferrer">NIST SP 800-53 controls</a>, HIPAA, and CIS Benchmarks.</p>
+<h2 id="senseisupport-cybersecurity-scoretm-framework">SenseiSupport Cybersecurity Scoreô Framework</h2>
+<p>The <strong>SenseiSupport Cybersecurity Scoreô</strong> is our proprietary scoring system to benchmark your organizationís cybersecurity posture. Weíve built this on 15+ years of managed IT experience, <a href="https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final" target="_blank" rel="noopener noreferrer">NIST SP 800-53 controls</a>, HIPAA, and CIS Benchmarks.</p>
 <table>
 <thead>
 <tr>
@@ -3663,16 +3663,16 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </table>
 <p><strong>Score Interpretation:</strong></p>
 <ul>
-<li>8-16: Critical gaps‚Äîimmediate action required</li>
-<li>17-26: Foundation exists‚Äîprioritize optimization</li>
-<li>27-34: Strong position‚Äîfocus on automation, AI, and continuous improvement</li>
-<li>35-40: Advanced‚Äîmaintain, test, and innovate</li>
+<li>8-16: Critical gapsóimmediate action required</li>
+<li>17-26: Foundation existsóprioritize optimization</li>
+<li>27-34: Strong positionófocus on automation, AI, and continuous improvement</li>
+<li>35-40: Advancedómaintain, test, and innovate</li>
 </ul>
 <p><strong>How to Use</strong>: Score each area honestly. Your lowest score is your highest risk. This scorecard is the basis for our managed IT security assessments and compliance planning.</p>
 <hr />
 <h2 id="the-real-cybersecurity-pain-business-impact-not-just-it-headaches">The Real Cybersecurity Pain: Business Impact, Not Just IT Headaches</h2>
-<p>Cybersecurity failures bleed money and trust. Here‚Äôs what that looks like in real business terms: a dental office can‚Äôt access patient records when ransomware hits; a law firm‚Äôs confidential documents leak, costing clients; a healthcare provider faces six-figure HIPAA fines after a phishing breach; an accounting firm scrambles after QuickBooks data is corrupted.</p>
-<p>These aren‚Äôt theoretical risks‚Äîthey‚Äôre patterns we see every quarter. The <a href="https://www.ibm.com/reports/data-breach" target="_blank" rel="noopener noreferrer">average cost of a data breach</a> is now $4.88 million globally, per IBM‚Äôs 2024 Cost of a <a href="https://www.ibm.com/security/data-breach" target="_blank" rel="noopener noreferrer">data breach report</a>. Even a single hour of downtime costs between $8,000‚Äì$15,600 for SMBs, according to Gartner.</p>
+<p>Cybersecurity failures bleed money and trust. Hereís what that looks like in real business terms: a dental office canít access patient records when ransomware hits; a law firmís confidential documents leak, costing clients; a healthcare provider faces six-figure HIPAA fines after a phishing breach; an accounting firm scrambles after QuickBooks data is corrupted.</p>
+<p>These arenít theoretical risksótheyíre patterns we see every quarter. The <a href="https://www.ibm.com/reports/data-breach" target="_blank" rel="noopener noreferrer">average cost of a data breach</a> is now $4.88 million globally, per IBMís 2024 Cost of a <a href="https://www.ibm.com/security/data-breach" target="_blank" rel="noopener noreferrer">data breach report</a>. Even a single hour of downtime costs between $8,000ñ$15,600 for SMBs, according to Gartner.</p>
 <p>The most common root causes:</p>
 <ul>
 <li>Manual, inconsistent security processes</li>
@@ -3681,7 +3681,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <li>Incomplete backups or untested disaster recovery</li>
 <li>Lack of user training, audit logging, and policy enforcement</li>
 </ul>
-<p>We see these pain points across managed IT, cybersecurity, and compliance engagements. The answer isn‚Äôt just more tools‚Äîit‚Äôs a unified, business-aligned cybersecurity program with automation, accountability, and strategic planning.</p>
+<p>We see these pain points across managed IT, cybersecurity, and compliance engagements. The answer isnít just more toolsóitís a unified, business-aligned cybersecurity program with automation, accountability, and strategic planning.</p>
 <blockquote>
 <p><strong>Key Takeaways:</strong></p>
 <ul>
@@ -3692,13 +3692,13 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </blockquote>
 <hr />
 <h2 id="building-a-proactive-cybersecurity-program">Building a Proactive Cybersecurity Program</h2>
-<p>A proactive cybersecurity program anticipates threats, automates controls, and aligns with your business goals‚Äînot just compliance checklists. Here‚Äôs how we operationalize this for clients:</p>
+<p>A proactive cybersecurity program anticipates threats, automates controls, and aligns with your business goalsónot just compliance checklists. Hereís how we operationalize this for clients:</p>
 <ol>
-<li><strong>Risk Assessment</strong>: Start with the SenseiSupport Cybersecurity Score‚Ñ¢ to identify your weakest links. Supplement with NIST SP 800-53 and HIPAA technical safeguards.</li>
+<li><strong>Risk Assessment</strong>: Start with the SenseiSupport Cybersecurity Scoreô to identify your weakest links. Supplement with NIST SP 800-53 and HIPAA technical safeguards.</li>
 <li><strong>Security Baseline</strong>: Deploy <a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint" target="_blank" rel="noopener noreferrer">Microsoft Defender for Endpoint</a> (P2), enforce MFA via Entra ID, automate patching with Intune or NinjaOne, and configure Conditional Access.</li>
 <li><strong>Policy &amp; Compliance</strong>: Map policies to CIS Controls and industry regulations; automate documentation and evidence collection for HIPAA, SOX, or SOC 2.</li>
 <li><strong>Continuous Monitoring</strong>: Implement single-pane dashboards (NinjaOne, Defender ATP, SentinelOne) and alerting for real-time incident response.</li>
-<li><strong>Quarterly Reviews</strong>: Review incidents, test backups, rotate credentials, and update policies‚Äîbusiness-aligned, not just technical.</li>
+<li><strong>Quarterly Reviews</strong>: Review incidents, test backups, rotate credentials, and update policiesóbusiness-aligned, not just technical.</li>
 </ol>
 <p><strong>Implementation Steps:</strong></p>
 <ul>
@@ -3710,17 +3710,17 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </ul>
 <p><strong>Common Mistakes:</strong></p>
 <ul>
-<li>Relying on ‚Äúset and forget‚Äù tools without validation.</li>
-<li>Skipping user awareness training‚Äîusers remain the #1 attack vector.</li>
+<li>Relying on ìset and forgetî tools without validation.</li>
+<li>Skipping user awareness trainingóusers remain the #1 attack vector.</li>
 <li>Not mapping controls to actual business processes or compliance needs.</li>
 </ul>
 <p><strong>Best Practices:</strong></p>
 <ul>
-<li>Automate everything possible‚Äîpatching, alerting, documentation.</li>
-<li>Layer controls‚Äîdon‚Äôt rely on AV or MFA alone.</li>
+<li>Automate everything possibleópatching, alerting, documentation.</li>
+<li>Layer controlsódonít rely on AV or MFA alone.</li>
 <li>Review and test quarterly. Security is a process, not a product.</li>
 </ul>
-<p><strong>Expected ROI</strong>: In our managed environments, proactive programs reduce unplanned downtime by 65‚Äì80% within 12 months (based on operational data), with compliance audit prep time dropping from weeks to days.</p>
+<p><strong>Expected ROI</strong>: In our managed environments, proactive programs reduce unplanned downtime by 65ñ80% within 12 months (based on operational data), with compliance audit prep time dropping from weeks to days.</p>
 <hr />
 <figure class="article-diagram" role="img" aria-label="A flowchart showing the proactive cybersecurity implementation process starting from identifying threats, assessing vulnerabilities, developing security policies, implementing controls, monitoring and reviewing, and ending with continuous improvement.">
   <pre class="mermaid">flowchart LR
@@ -3741,17 +3741,17 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </blockquote>
 <hr />
 <h2 id="zero-trust-identity-first-always-verified-security">Zero Trust: Identity-First, Always-Verified Security</h2>
-<p>Zero Trust is a security model that assumes no user or device is inherently trustworthy‚Äîevery access request is authenticated, authorized, and continuously validated. This model is now the Microsoft and NIST standard for modern businesses.</p>
+<p>Zero Trust is a security model that assumes no user or device is inherently trustworthyóevery access request is authenticated, authorized, and continuously validated. This model is now the Microsoft and NIST standard for modern businesses.</p>
 <p><strong>Direct Answer:</strong> Zero Trust requires always verifying user and device identities, enforcing least privilege, and segmenting networks to minimize breach impact. We implement this in every managed IT and cloud services engagement.</p>
 <p><strong>How We Deploy Zero Trust:</strong></p>
 <ul>
 <li><strong>Identity Security</strong>: Deploy Microsoft Entra ID (Azure AD), enforce MFA, block legacy authentication.</li>
 <li><strong>Conditional Access</strong>: Policy set includes:
 <ul>
-<li>CA001 ‚Äî Require MFA for All Users</li>
-<li>CA002 ‚Äî Block Legacy Authentication</li>
-<li>CA003 ‚Äî Require Compliant Device for Sensitive Apps</li>
-<li>CA004 ‚Äî Restrict Admin Access to Secured Workstations</li>
+<li>CA001 ó Require MFA for All Users</li>
+<li>CA002 ó Block Legacy Authentication</li>
+<li>CA003 ó Require Compliant Device for Sensitive Apps</li>
+<li>CA004 ó Restrict Admin Access to Secured Workstations</li>
 </ul>
 </li>
 <li><strong>Device Trust</strong>: All endpoints must be Intune-compliant: BitLocker enabled, Defender active, OS at 22H2+.</li>
@@ -3761,13 +3761,13 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </ul>
 <p><strong>Common Mistakes:</strong></p>
 <ul>
-<li>Relying on ‚Äútrusted‚Äù internal networks‚Äîattackers target lateral movement.</li>
-<li>Allowing legacy protocols like POP/IMAP‚Äîthese bypass MFA.</li>
-<li>Not enforcing device compliance‚Äîpersonal devices are often unprotected.</li>
+<li>Relying on ìtrustedî internal networksóattackers target lateral movement.</li>
+<li>Allowing legacy protocols like POP/IMAPóthese bypass MFA.</li>
+<li>Not enforcing device complianceópersonal devices are often unprotected.</li>
 </ul>
 <p><strong>Best Practices:</strong></p>
 <ul>
-<li>Start with Conditional Access‚Äîdon‚Äôt wait for a breach.</li>
+<li>Start with Conditional Accessódonít wait for a breach.</li>
 <li>Require compliant devices for all sensitive data access.</li>
 <li>Audit policies quarterly and update as new threats emerge.</li>
 </ul>
@@ -3793,37 +3793,37 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <blockquote>
 <p><strong>Key Takeaways:</strong></p>
 <ul>
-<li>Zero Trust is the new security baseline‚Äîidentity, device, and network controls are non-negotiable.</li>
+<li>Zero Trust is the new security baselineóidentity, device, and network controls are non-negotiable.</li>
 <li>Conditional Access must be enforced for all users and admins.</li>
 <li>Quarterly policy review is essential as threats evolve.</li>
 </ul>
 </blockquote>
 <hr />
 <h2 id="business-continuity-disaster-recovery-protecting-what-matters">Business Continuity &amp; Disaster Recovery: Protecting What Matters</h2>
-<p>Business continuity and disaster recovery (BC/DR) ensure your business survives ransomware, hardware failure, or human error. It‚Äôs not enough to have backups‚Äîyou need tested, immutable, and quickly restorable systems.</p>
-<p><strong>Direct Answer:</strong> BC/DR is the practice of ensuring your business can restore systems and data within defined RTO (Recovery Time Objective) and RPO (Recovery Point Objective) after an incident. For regulated clients, we target RTO &lt;4 hours, RPO &lt;1 hour‚Äîvalidated quarterly.</p>
+<p>Business continuity and disaster recovery (BC/DR) ensure your business survives ransomware, hardware failure, or human error. Itís not enough to have backupsóyou need tested, immutable, and quickly restorable systems.</p>
+<p><strong>Direct Answer:</strong> BC/DR is the practice of ensuring your business can restore systems and data within defined RTO (Recovery Time Objective) and RPO (Recovery Point Objective) after an incident. For regulated clients, we target RTO &lt;4 hours, RPO &lt;1 houróvalidated quarterly.</p>
 <p><strong>How We Implement:</strong></p>
 <ul>
 <li><strong>Immutable Backups</strong>: Use Azure Backup or Datto for tamper-proof storage.</li>
 <li><strong>Frequent Testing</strong>: Monthly for healthcare/dental (HIPAA), quarterly for law/accounting.</li>
 <li><strong>Failover Strategies</strong>: Active-passive for most SMBs, active-active for distributed sites.</li>
-<li><strong>Documentation</strong>: Recovery runbooks, DR playbooks, evidence for HIPAA ¬ß164.308(a)(7).</li>
+<li><strong>Documentation</strong>: Recovery runbooks, DR playbooks, evidence for HIPAA ß164.308(a)(7).</li>
 <li><strong>Backup Verification</strong>: Automated daily test restores (Datto, Veeam) with alerting.</li>
 <li><strong>Multi-Site Coordination</strong>: Centralized backup status dashboard for all locations.</li>
 </ul>
 <p><strong>Common Mistakes:</strong></p>
 <ul>
-<li>‚ÄúBackups‚Äù that aren‚Äôt tested or immutable‚Äîransomware can encrypt backup files on the network.</li>
-<li>No documented recovery process‚Äîrestores take days, not hours.</li>
-<li>Ignoring cloud/SaaS backup‚ÄîM365 and G Suite data is not backed up by default.</li>
+<li>ìBackupsî that arenít tested or immutableóransomware can encrypt backup files on the network.</li>
+<li>No documented recovery processórestores take days, not hours.</li>
+<li>Ignoring cloud/SaaS backupóM365 and G Suite data is not backed up by default.</li>
 </ul>
 <p><strong>Best Practices:</strong></p>
 <ul>
 <li>Immutable, offsite backup is non-negotiable.</li>
-<li>Test recovery monthly‚Äîdon‚Äôt wait for a crisis.</li>
+<li>Test recovery monthlyódonít wait for a crisis.</li>
 <li>Document RTO/RPO targets and validate in quarterly reviews.</li>
 </ul>
-<p><strong>Outcome:</strong> Across managed environments, verified BC/DR reduces average downtime from 12‚Äì24 hours to under 3 hours per incident.</p>
+<p><strong>Outcome:</strong> Across managed environments, verified BC/DR reduces average downtime from 12ñ24 hours to under 3 hours per incident.</p>
 <hr />
 <figure class="article-diagram" role="img" aria-label="A sequence diagram showing the disaster recovery workflow starting from incident detection, activating the disaster recovery plan, failing over systems, verifying data integrity, restoring operations, and confirming recovery.">
   <pre class="mermaid">sequenceDiagram
@@ -3842,7 +3842,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <blockquote>
 <p><strong>Key Takeaways:</strong></p>
 <ul>
-<li>BC/DR is about rapid, tested recovery‚Äînot just backup.</li>
+<li>BC/DR is about rapid, tested recoveryónot just backup.</li>
 <li>Immutable, offsite backups and monthly testing are required for compliance and resilience.</li>
 <li>Documented RTO/RPO with regular review separates mature organizations from at-risk ones.</li>
 </ul>
@@ -3850,7 +3850,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <hr />
 <h2 id="cloud-governance-and-compliance">Cloud Governance and Compliance</h2>
 <p>Cloud governance is the discipline of managing cloud resources for security, cost, compliance, and lifecycle. Without it, cloud adoption becomes a security and financial liability.</p>
-<p><strong>Direct Answer:</strong> Cloud governance covers landing zones, tagging, cost management, RBAC, and policy enforcement‚Äîensuring your Azure, AWS, or M365 cloud is secure and compliant.</p>
+<p><strong>Direct Answer:</strong> Cloud governance covers landing zones, tagging, cost management, RBAC, and policy enforcementóensuring your Azure, AWS, or M365 cloud is secure and compliant.</p>
 <p><strong>How We Implement:</strong></p>
 <ul>
 <li><strong>Azure Landing Zones</strong>: Multi-subscription, management groups, resource groups for environment separation.</li>
@@ -3858,19 +3858,19 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <li><strong>Cost Management</strong>: Budgets and alerts in Azure Cost Management, Advisor recommendations.</li>
 <li><strong>RBAC &amp; PIM</strong>: Role-based access, least privilege, just-in-time admin via Entra ID P2.</li>
 <li><strong>Azure Policies</strong>: Require encryption, region restriction, enforce tagging, block public IPs.</li>
-<li><strong>Governance Frameworks</strong>: Use Microsoft‚Äôs Cloud Adoption Framework and NIST SP 800-53 for mapping controls.</li>
+<li><strong>Governance Frameworks</strong>: Use Microsoftís Cloud Adoption Framework and NIST SP 800-53 for mapping controls.</li>
 </ul>
 <p><strong>Common Mistakes:</strong></p>
 <ul>
 <li>Sprawl: Unmanaged resources, shadow IT, uncontrolled spend.</li>
-<li>Over-permissioned users‚Äîno RBAC or JIT.</li>
+<li>Over-permissioned usersóno RBAC or JIT.</li>
 <li>No monitoring for policy drift or non-compliance.</li>
 </ul>
 <p><strong>Best Practices:</strong></p>
 <ul>
 <li>Automate resource deployment with ARM/Terraform for consistency.</li>
 <li>Enforce policy via Azure Policy or AWS Config.</li>
-<li>Schedule quarterly governance reviews‚Äîmap controls to compliance requirements (HIPAA, SOX, CIS).</li>
+<li>Schedule quarterly governance reviewsómap controls to compliance requirements (HIPAA, SOX, CIS).</li>
 </ul>
 <p><strong>Outcome:</strong> With our Azure consulting and managed IT services, clients reduce cloud spend overruns and pass compliance audits with minimal remediation.</p>
 <hr />
@@ -3902,8 +3902,8 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </blockquote>
 <hr />
 <h2 id="tools-technologies-operationalizing-cybersecurity">Tools &amp; Technologies: Operationalizing Cybersecurity</h2>
-<p>Selecting the right tools is critical‚Äîbut knowing when and how to use them is what drives results. Here‚Äôs how we build layered, operational defenses:</p>
-<p><strong>Direct Answer:</strong> Effective cybersecurity requires endpoint protection, automated patching, identity management, backup, and monitoring tools‚Äîproperly configured and integrated.</p>
+<p>Selecting the right tools is criticalóbut knowing when and how to use them is what drives results. Hereís how we build layered, operational defenses:</p>
+<p><strong>Direct Answer:</strong> Effective cybersecurity requires endpoint protection, automated patching, identity management, backup, and monitoring toolsóproperly configured and integrated.</p>
 <h3 id="core-tools-we-deploy">Core Tools We Deploy</h3>
 <ul>
 <li><p><strong>Microsoft Intune (Endpoint Manager)</strong>: Centralized device management, compliance enforcement, automated patching.</p>
@@ -3916,7 +3916,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <li><p><strong>Microsoft Entra ID (Azure AD)</strong>: Identity backbone, MFA, SSO, Conditional Access.</p>
 <ul>
 <li><em>Use for</em>: Cloud identity, hybrid environments, Zero Trust.</li>
-<li><em>Config</em>: CA001‚Äì004 policies, PIM for admin accounts.</li>
+<li><em>Config</em>: CA001ñ004 policies, PIM for admin accounts.</li>
 <li><em>Limitation</em>: Legacy on-prem apps require AD Connect.</li>
 </ul>
 </li>
@@ -3924,7 +3924,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <ul>
 <li><em>Use for</em>: Advanced threat hunting, automated remediation.</li>
 <li><em>Config</em>: Real-time protection, <a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction" target="_blank" rel="noopener noreferrer"><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction" target="_blank" rel="noopener noreferrer">attack surface reduction</a> rules</a>.</li>
-<li><em>Limitation</em>: Not available in all SMB M365 plans‚Äîrequires add-on.</li>
+<li><em>Limitation</em>: Not available in all SMB M365 plansórequires add-on.</li>
 </ul>
 </li>
 <li><p><strong>NinjaOne/ConnectWise Automate</strong>: RMM for automated patching, monitoring, scripting.</p>
@@ -3975,36 +3975,36 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <tr>
 <td>Typical cost</td>
 <td>Included in M365 E3/BP</td>
-<td>$3‚Äì5/endpoint/month</td>
+<td>$3ñ5/endpoint/month</td>
 </tr>
 <tr>
 <td>Our pick</td>
-<td>‚úì for law/healthcare</td>
-<td>‚úì for dental/accounting</td>
+<td>? for law/healthcare</td>
+<td>? for dental/accounting</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Key Implementation Patterns:</strong></p>
 <ul>
-<li>Standardize toolset across all locations‚Äîcentralize management.</li>
-<li>Automate patching and compliance‚Äîmanual checks always lag.</li>
-<li>Layer endpoint, identity, and backup‚Äîno single point of failure.</li>
+<li>Standardize toolset across all locationsócentralize management.</li>
+<li>Automate patching and complianceómanual checks always lag.</li>
+<li>Layer endpoint, identity, and backupóno single point of failure.</li>
 </ul>
 <blockquote>
 <p><strong>Key Takeaways:</strong></p>
 <ul>
-<li>The right tool is the one you‚Äôll use and monitor‚Äîdon‚Äôt over-buy.</li>
+<li>The right tool is the one youíll use and monitoródonít over-buy.</li>
 <li>Centralized, automated management is critical for multi-site businesses.</li>
 <li>Integrate tools for monitoring, compliance, and response workflows.</li>
 </ul>
 </blockquote>
 <hr />
 <h2 id="multi-site-cybersecurity-scaling-security-across-locations">Multi-Site Cybersecurity: Scaling Security Across Locations</h2>
-<p>Securing multi-site businesses‚ÄîDSOs, healthcare networks, law firms, manufacturers‚Äîrequires centralized policy, monitoring, and automation with local flexibility.</p>
-<p><strong>Direct Answer:</strong> Multi-site cybersecurity means single-pane management, standardized security baselines, and location-specific controls‚Äîdelivered via cloud-native tools and automated processes.</p>
+<p>Securing multi-site businessesóDSOs, healthcare networks, law firms, manufacturersórequires centralized policy, monitoring, and automation with local flexibility.</p>
+<p><strong>Direct Answer:</strong> Multi-site cybersecurity means single-pane management, standardized security baselines, and location-specific controlsódelivered via cloud-native tools and automated processes.</p>
 <p><strong>How We Implement:</strong></p>
 <ul>
-<li><strong>Centralized Monitoring</strong>: NinjaOne or Defender ATP dashboard for all locations‚Äîalerts, patch status, backup verification.</li>
+<li><strong>Centralized Monitoring</strong>: NinjaOne or Defender ATP dashboard for all locationsóalerts, patch status, backup verification.</li>
 <li><strong>Standardized Security Baseline</strong>: Company-wide Intune or RMM profiles; every device gets the same protection.</li>
 <li><strong>Role-Based Access</strong>: Local managers get device visibility, regional IT controls policy, NOC manages escalations.</li>
 <li><strong>VPN &amp; Connectivity</strong>: Site-to-site VPNs with auto-failover; Azure Virtual WAN for scalable backbone.</li>
@@ -4019,8 +4019,8 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </ul>
 <p><strong>Common Mistakes:</strong></p>
 <ul>
-<li>Each site doing its own thing (‚Äúrogue IT‚Äù)‚Äîleads to inconsistent security and compliance.</li>
-<li>No central monitoring‚Äîbreaches detected weeks late.</li>
+<li>Each site doing its own thing (ìrogue ITî)óleads to inconsistent security and compliance.</li>
+<li>No central monitoringóbreaches detected weeks late.</li>
 <li>Inconsistent patching or backup schedules.</li>
 </ul>
 <p><strong>Best Practices:</strong></p>
@@ -4029,7 +4029,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <li>Regular cross-site audit and test events.</li>
 <li>Train local staff on incident escalation and reporting.</li>
 </ul>
-<p><strong>Outcome:</strong> Our multi-site managed IT clients see unified compliance, faster incident response, and less downtime‚Äîacross all offices.</p>
+<p><strong>Outcome:</strong> Our multi-site managed IT clients see unified compliance, faster incident response, and less downtimeóacross all offices.</p>
 <hr />
 <figure class="article-diagram" role="img" aria-label="A flowchart illustrating the multi-site cybersecurity management flow with a central security team overseeing site-specific security and local threat monitoring, all feeding into centralized reporting.">
   <pre class="mermaid">flowchart LR
@@ -4054,13 +4054,13 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </blockquote>
 <hr />
 <h2 id="industry-case-studies">Industry Case Studies</h2>
-<h3 id="dental-practice-strategic-it-roadmap">Dental Practice ‚Äî Strategic IT Roadmap</h3>
-<p>A typical 3-location dental group runs 40+ workstations, Dentrix or Eaglesoft, digital imaging (Dexis, Schick), and must meet HIPAA technical safeguards. Our IT roadmap assesses infrastructure, identifies single points of failure, migrates email/storage to M365, implements Intune/Defender ATP, and automates patches. We enforce CA001‚Äì004 for Zero Trust, conduct HIPAA ¬ß164.312(a)(1) encryption checks, and run quarterly backup tests. Outcome: predictable IT costs, audit-ready compliance, and downtime reduced within 90 days.</p>
-<h3 id="law-firm-security-modernization">Law Firm ‚Äî Security Modernization</h3>
+<h3 id="dental-practice-strategic-it-roadmap">Dental Practice ó Strategic IT Roadmap</h3>
+<p>A typical 3-location dental group runs 40+ workstations, Dentrix or Eaglesoft, digital imaging (Dexis, Schick), and must meet HIPAA technical safeguards. Our IT roadmap assesses infrastructure, identifies single points of failure, migrates email/storage to M365, implements Intune/Defender ATP, and automates patches. We enforce CA001ñ004 for Zero Trust, conduct HIPAA ß164.312(a)(1) encryption checks, and run quarterly backup tests. Outcome: predictable IT costs, audit-ready compliance, and downtime reduced within 90 days.</p>
+<h3 id="law-firm-security-modernization">Law Firm ó Security Modernization</h3>
 <p>A 2-office law firm needs M365 with DLP, document retention, and ethical walls. Our process: migrate to M365 E3, enforce Conditional Access, layer Intune with Defender ATP, and implement DLP for client data. Quarterly reviews validate patch compliance (target &gt;97%) and incident response drills. Result: fewer security incidents, seamless remote access, and compliance with ABA and state bar guidelines.</p>
-<h3 id="healthcare-provider-compliance-automation">Healthcare Provider ‚Äî Compliance Automation</h3>
-<p>For healthcare clients with multiple clinics, we design redundant connectivity, automate EHR backups (1-hour RPO), enforce device compliance with Intune, and map all controls to HIPAA ¬ß164.308(a)(7). Multi-site monitoring and DR testing are included. Outcome: no compliance deficiencies in audits, RTO consistently under 4 hours, and reduced IT overhead.</p>
-<h3 id="manufacturingaccounting-standardization-uptime">Manufacturing/Accounting ‚Äî Standardization &amp; Uptime</h3>
+<h3 id="healthcare-provider-compliance-automation">Healthcare Provider ó Compliance Automation</h3>
+<p>For healthcare clients with multiple clinics, we design redundant connectivity, automate EHR backups (1-hour RPO), enforce device compliance with Intune, and map all controls to HIPAA ß164.308(a)(7). Multi-site monitoring and DR testing are included. Outcome: no compliance deficiencies in audits, RTO consistently under 4 hours, and reduced IT overhead.</p>
+<h3 id="manufacturingaccounting-standardization-uptime">Manufacturing/Accounting ó Standardization &amp; Uptime</h3>
 <p>Manufacturing and accounting clients demand reliable, standardized infrastructure. We deploy NinjaOne for automated patching, enforce RBAC and device compliance, and centralize backup with immutable storage. Seasonal scaling is handled via Azure VM autoscaling, and all cost centers are tagged for budget tracking. Result: improved uptime, reduced manual intervention, and audit-ready logs.</p>
 <blockquote>
 <p><strong>Key Takeaways:</strong></p>
@@ -4114,7 +4114,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </tr>
 </tbody>
 </table>
-<p><strong>How to use:</strong> Identify your current level using the SenseiSupport Cybersecurity Score‚Ñ¢. Most SMBs are stuck at Level 2 or 3. Our managed IT transformation process targets Level 4 within 12‚Äì18 months.</p>
+<p><strong>How to use:</strong> Identify your current level using the SenseiSupport Cybersecurity Scoreô. Most SMBs are stuck at Level 2 or 3. Our managed IT transformation process targets Level 4 within 12ñ18 months.</p>
 <figure class="article-diagram" role="img" aria-label="A flowchart showing the progression of cybersecurity maturity from initial, developing, defined, managed, to optimized stages.">
   <pre class="mermaid">flowchart TD
   A[Initial] --&gt; B[Developing]
@@ -4136,19 +4136,19 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <tbody>
 <tr>
 <td>Quick Wins</td>
-<td>Week 1‚Äì2</td>
+<td>Week 1ñ2</td>
 <td>MFA deployment, patch automation, backup audit</td>
 <td>Block 90% of common threats</td>
 </tr>
 <tr>
 <td>Foundation</td>
-<td>Month 1‚Äì2</td>
+<td>Month 1ñ2</td>
 <td>Conditional Access, device compliance, DR testing</td>
 <td>Regulatory compliance, reduced risk</td>
 </tr>
 <tr>
 <td>Optimization</td>
-<td>Month 3‚Äì6</td>
+<td>Month 3ñ6</td>
 <td>Quarterly reviews, automated phishing, AI alerts</td>
 <td>Incident response &lt;15 min, audit-ready</td>
 </tr>
@@ -4158,7 +4158,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <blockquote>
 <p><strong>Key Takeaways:</strong></p>
 <ul>
-<li>Most businesses plateau at Level 2‚Äì3; managed services drive rapid advancement.</li>
+<li>Most businesses plateau at Level 2ñ3; managed services drive rapid advancement.</li>
 <li>Level 4 (Automated) delivers the best balance of cost, security, and operational efficiency.</li>
 <li>Executive buy-in and regular review accelerate progression.</li>
 </ul>
@@ -4196,7 +4196,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </tr>
 <tr>
 <td>Cost Per Ticket</td>
-<td>$15‚Äì25 (managed) vs $50‚Äì75 (break-fix)</td>
+<td>$15ñ25 (managed) vs $50ñ75 (break-fix)</td>
 <td>Operational efficiency</td>
 </tr>
 <tr>
@@ -4226,25 +4226,25 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </tr>
 </tbody>
 </table>
-<p>Our managed IT clients consistently achieve 97.3% patch compliance within 72 hours, and average MTTR under 15 minutes‚Äîbeating industry averages (Gartner, IBM).</p>
+<p>Our managed IT clients consistently achieve 97.3% patch compliance within 72 hours, and average MTTR under 15 minutesóbeating industry averages (Gartner, IBM).</p>
 <hr />
 <h2 id="ai-modern-automation-in-cybersecurity">AI &amp; Modern Automation in Cybersecurity</h2>
 <p>AI is transforming cybersecurity by enabling predictive detection, autonomous remediation, and intelligent ticketing. But it must be deployed responsibly, with governance and business alignment.</p>
-<p><strong>Direct Answer:</strong> AI-powered cybersecurity uses machine learning and automation to detect threats, respond instantly, and reduce false positives‚Äîfreeing IT teams to focus on business value.</p>
+<p><strong>Direct Answer:</strong> AI-powered cybersecurity uses machine learning and automation to detect threats, respond instantly, and reduce false positivesófreeing IT teams to focus on business value.</p>
 <h3 id="what-works-now-production-ready">What Works Now (Production-Ready)</h3>
 <ul>
 <li><strong>Microsoft Copilot (Security Copilot, M365 Copilot)</strong>: AI-driven security summaries, threat analysis, and actionable recommendations. Security Copilot can auto-summarize incidents and recommend remediations in real time.</li>
 <li><strong>Predictive Monitoring (Defender ATP, NinjaOne)</strong>: ML-based anomaly detection flags unusual behavior before an incident occurs.</li>
 <li><strong>Autonomous Remediation (SentinelOne, Huntress)</strong>: Self-healing endpoints, ransomware rollback, and auto-isolation.</li>
-<li><strong>Power Automate AI Builder</strong>: Automated response workflows‚Äîe.g., auto-disable user on suspicious sign-in.</li>
-<li><strong>Agentic AI</strong>: Multi-step workflows‚Äîe.g., detect threat, isolate device, notify NOC, open ticket, trigger backup restore.</li>
+<li><strong>Power Automate AI Builder</strong>: Automated response workflowsóe.g., auto-disable user on suspicious sign-in.</li>
+<li><strong>Agentic AI</strong>: Multi-step workflowsóe.g., detect threat, isolate device, notify NOC, open ticket, trigger backup restore.</li>
 <li><strong>AI Help Desk</strong>: Intelligent routing and auto-response reduce MTTR and cost per ticket.</li>
 </ul>
 <h3 id="governance-risk">Governance &amp; Risk</h3>
 <ul>
-<li><strong>AI Governance</strong>: Define responsible use, privacy, and explainability policies (NIST AI RMF, Microsoft‚Äôs Responsible AI Standard).</li>
+<li><strong>AI Governance</strong>: Define responsible use, privacy, and explainability policies (NIST AI RMF, Microsoftís Responsible AI Standard).</li>
 <li><strong>Data Privacy</strong>: Limit AI access to PHI/PII; audit all AI actions.</li>
-<li><strong>Cost Optimization</strong>: Use AI for the highest-value scenarios‚Äîpredictive monitoring, not just email triage.</li>
+<li><strong>Cost Optimization</strong>: Use AI for the highest-value scenariosópredictive monitoring, not just email triage.</li>
 <li><strong>Auditability</strong>: All AI actions must be logged and reviewable.</li>
 </ul>
 <p><strong>Best Practices:</strong></p>
@@ -4253,7 +4253,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <li>In regulated industries, document AI workflows for compliance evidence.</li>
 <li>Review AI outputs quarterly for false positives/negatives.</li>
 </ul>
-<p><strong>Outcome:</strong> In our managed environments, AI-driven monitoring cuts incident response time by 50‚Äì70% and reduces false alerts by up to 80% (operational data).</p>
+<p><strong>Outcome:</strong> In our managed environments, AI-driven monitoring cuts incident response time by 50ñ70% and reduces false alerts by up to 80% (operational data).</p>
 <hr />
 <figure class="article-diagram" role="img" aria-label="A flowchart illustrating the AI-driven cybersecurity operations pipeline starting from data collection, data processing, threat detection, response automation, incident analysis, and continuous learning.">
   <pre class="mermaid">flowchart LR
@@ -4304,9 +4304,9 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </tr>
 <tr>
 <td>Typical Cost</td>
-<td>$600‚Äì$1,200/month (SMB)</td>
-<td>$75‚Äì$150/hr labor (staff)</td>
-<td>$350‚Äì$900/month + staff time</td>
+<td>$600ñ$1,200/month (SMB)</td>
+<td>$75ñ$150/hr labor (staff)</td>
+<td>$350ñ$900/month + staff time</td>
 </tr>
 <tr>
 <td>Maintenance</td>
@@ -4340,9 +4340,9 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </tr>
 <tr>
 <td>Our Recommendation</td>
-<td>‚úì (most SMBs, regulated)</td>
+<td>? (most SMBs, regulated)</td>
 <td>Only if you have mature IT</td>
-<td>‚úì for scaling or internal upskilling</td>
+<td>? for scaling or internal upskilling</td>
 </tr>
 </tbody>
 </table>
@@ -4363,8 +4363,8 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <hr />
 <h2 id="interactive-self-assessment-cybersecurity-readiness-score">Interactive Self-Assessment: Cybersecurity Readiness Score</h2>
 <blockquote>
-<p><strong>üìä Quick Self-Assessment: Cybersecurity Readiness Score</strong></p>
-<p>Rate your organization 1‚Äì5 for each criterion:</p>
+<p><strong>?? Quick Self-Assessment: Cybersecurity Readiness Score</strong></p>
+<p>Rate your organization 1ñ5 for each criterion:</p>
 <ol class="contains-task-list">
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> MFA enforced for all users and admins</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> Automated patch management, &gt;97% compliance in 72 hours</li>
@@ -4386,32 +4386,32 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </thead>
 <tbody>
 <tr>
-<td>8‚Äì16</td>
+<td>8ñ16</td>
 <td>Critical</td>
 <td>Engage professional support immediately</td>
 </tr>
 <tr>
-<td>17‚Äì26</td>
+<td>17ñ26</td>
 <td>Developing</td>
 <td>Prioritize top 3 gaps within 90 days</td>
 </tr>
 <tr>
-<td>27‚Äì34</td>
+<td>27ñ34</td>
 <td>Strong</td>
 <td>Focus on optimization and automation</td>
 </tr>
 <tr>
-<td>35‚Äì40</td>
+<td>35ñ40</td>
 <td>Advanced</td>
 <td>Maintain and expand AI-driven security</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Want a detailed professional assessment?</strong> [Get your free personalized Cybersecurity Score ‚Üí]</p>
+<p><strong>Want a detailed professional assessment?</strong> [Get your free personalized Cybersecurity Score ?]</p>
 </blockquote>
 <hr />
-<h2 id="senseisupport-cybersecurity-risk-indextm">SenseiSupport Cybersecurity Risk Index‚Ñ¢</h2>
-<p>The <strong>SenseiSupport Cybersecurity Risk Index‚Ñ¢</strong> quantifies your risk exposure across 8 critical domains. Each criterion is scored 1‚Äì5 (1=high risk, 5=low risk).</p>
+<h2 id="senseisupport-cybersecurity-risk-indextm">SenseiSupport Cybersecurity Risk Indexô</h2>
+<p>The <strong>SenseiSupport Cybersecurity Risk Indexô</strong> quantifies your risk exposure across 8 critical domains. Each criterion is scored 1ñ5 (1=high risk, 5=low risk).</p>
 <table>
 <thead>
 <tr>
@@ -4437,7 +4437,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <tr>
 <td>Patch Lag</td>
 <td>&gt;30 days delay</td>
-<td>7‚Äì14 days</td>
+<td>7ñ14 days</td>
 <td>&lt;72 hours, automated</td>
 </tr>
 <tr>
@@ -4474,17 +4474,17 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </table>
 <p><strong>Score Interpretation:</strong></p>
 <ul>
-<li>8‚Äì16: Immediate action needed‚Äîrisk of breach is high.</li>
-<li>17‚Äì26: Improving‚Äîclose top risks within 90 days.</li>
-<li>27‚Äì34: Mature‚Äîfocus on automation, AI, and review.</li>
-<li>35‚Äì40: Resilient‚Äîmaintain, monitor, and innovate.</li>
+<li>8ñ16: Immediate action neededórisk of breach is high.</li>
+<li>17ñ26: Improvingóclose top risks within 90 days.</li>
+<li>27ñ34: Matureófocus on automation, AI, and review.</li>
+<li>35ñ40: Resilientómaintain, monitor, and innovate.</li>
 </ul>
 <hr />
 <blockquote>
-<p><strong>üì• Free Resource: Cybersecurity Implementation Checklist</strong></p>
+<p><strong>?? Free Resource: Cybersecurity Implementation Checklist</strong></p>
 <p>Step-by-step playbook for deploying, testing, and optimizing your security controls.
-<strong>Includes:</strong> MFA &amp; Conditional Access configs ‚Ä¢ Patch automation guide ‚Ä¢ DR runbook template ‚Ä¢ Quarterly review worksheet<br />
-[Download your copy ‚Üí]</p>
+<strong>Includes:</strong> MFA &amp; Conditional Access configs ï Patch automation guide ï DR runbook template ï Quarterly review worksheet<br />
+[Download your copy ?]</p>
 </blockquote>
 <hr />
 <h2 id="roi-analysis-real-business-impact-of-cybersecurity">ROI Analysis: Real Business Impact of Cybersecurity</h2>
@@ -4514,7 +4514,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
     <div class="roi-stat"><span class="roi-label">Net ROI</span><span class="roi-value roi-positive" id="roi-calc-0-net">$46,000</span></div>
     <div class="roi-stat"><span class="roi-label">Payback Period</span><span class="roi-value" id="roi-calc-0-payback">~1.4 months</span></div>
   </div>
-</div><p>Strong cybersecurity isn‚Äôt a cost center‚Äîit‚Äôs a profit and risk management engine. Here‚Äôs how we quantify the impact for executives and finance teams:</p>
+</div><p>Strong cybersecurity isnít a cost centeróitís a profit and risk management engine. Hereís how we quantify the impact for executives and finance teams:</p>
 <p><strong>Direct Answer:</strong> Cybersecurity delivers ROI through labor savings, downtime avoidance, regulatory risk reduction, and insurance premium discounts.</p>
 <h3 id="sample-roi-calculation-smb-50-endpoints">Sample ROI Calculation (SMB, 50 endpoints)</h3>
 <ul>
@@ -4522,7 +4522,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <li><strong>With automation (managed IT)</strong>: 2 hours/week = $10,400/year</li>
 <li><strong>Annual managed cybersecurity</strong>: $12,000 ($1,000/month)</li>
 <li><strong>Downtime reduction</strong>: 16 hours/year avoided @ $1,000/hr = $16,000</li>
-<li><strong>Regulatory fine exposure</strong>: $0 (vs. typical HIPAA fines $50k‚Äì$100k per incident)</li>
+<li><strong>Regulatory fine exposure</strong>: $0 (vs. typical HIPAA fines $50kñ$100k per incident)</li>
 </ul>
 <p><strong>Total 3-Year TCO:</strong></p>
 <ul>
@@ -4543,35 +4543,35 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <tbody>
 <tr>
 <td>Dental (3 office)</td>
-<td>$9,600‚Äì$14,400</td>
-<td>$40k‚Äì$60k</td>
+<td>$9,600ñ$14,400</td>
+<td>$40kñ$60k</td>
 <td>&lt;6 months</td>
 </tr>
 <tr>
 <td>Law (2 office)</td>
-<td>$12,000‚Äì$18,000</td>
+<td>$12,000ñ$18,000</td>
 <td>$60k+</td>
 <td>&lt;6 months (audit cycles)</td>
 </tr>
 <tr>
 <td>Healthcare (multi)</td>
-<td>$15,000‚Äì$28,000</td>
+<td>$15,000ñ$28,000</td>
 <td>$80k+</td>
-<td>4‚Äì8 months</td>
+<td>4ñ8 months</td>
 </tr>
 <tr>
 <td>Manufacturing/Acct</td>
-<td>$8,400‚Äì$16,800</td>
+<td>$8,400ñ$16,800</td>
 <td>$40k+</td>
 <td>&lt;1 year</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Productivity Gains:</strong> Automated patching, backup, and AI alerting save 8‚Äì12 hours/week for IT‚Äîtime redirected to business projects.</p>
+<p><strong>Productivity Gains:</strong> Automated patching, backup, and AI alerting save 8ñ12 hours/week for ITótime redirected to business projects.</p>
 <p><strong>Risk Reduction Value:</strong> One avoided breach or fine covers multiple years of managed cybersecurity costs.</p>
 <hr />
 <blockquote>
-<p><strong>üí∞ Ready to see these savings in your business?</strong> We‚Äôll build a custom ROI projection for your environment‚Äîincluding labor savings, risk reduction, and a 3-year cost comparison. [Get your estimate ‚Üí]</p>
+<p><strong>?? Ready to see these savings in your business?</strong> Weíll build a custom ROI projection for your environmentóincluding labor savings, risk reduction, and a 3-year cost comparison. [Get your estimate ?]</p>
 </blockquote>
 <hr />
 <h2 id="what-were-seeing-across-our-managed-environments">What We're Seeing Across Our Managed Environments</h2>
@@ -4637,40 +4637,40 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <h3 id="common-mistakes-we-see">Common Mistakes We See</h3>
 <ul>
 <li><strong>Skipping Conditional Access</strong>: Many organizations deploy MFA but leave legacy protocols open. Attackers exploit this for easy access.</li>
-<li><strong>Set-and-Forget Patch Management</strong>: Businesses automate patching but never check compliance reports‚Äîmissing endpoints remain vulnerable for months.</li>
-<li><strong>Backups Not Tested or Immutable</strong>: &quot;We back up every night&quot;‚Äîbut nobody tests restores or uses immutable storage. Ransomware encrypts backup shares, leaving organizations exposed.</li>
+<li><strong>Set-and-Forget Patch Management</strong>: Businesses automate patching but never check compliance reportsómissing endpoints remain vulnerable for months.</li>
+<li><strong>Backups Not Tested or Immutable</strong>: &quot;We back up every night&quot;óbut nobody tests restores or uses immutable storage. Ransomware encrypts backup shares, leaving organizations exposed.</li>
 <li><strong>No User Security Training</strong>: Users remain the #1 breach vector. Without regular, simulated phishing campaigns, click rates stay dangerously high.</li>
-<li><strong>Over-permissioned Admins</strong>: Lack of RBAC and PIM leads to excessive privileges‚Äîone compromised account exposes the whole environment.</li>
-<li><strong>Siloed Tools</strong>: Endpoint protection, monitoring, and backup run in silos‚Äîno unified alerting or response workflow.</li>
+<li><strong>Over-permissioned Admins</strong>: Lack of RBAC and PIM leads to excessive privilegesóone compromised account exposes the whole environment.</li>
+<li><strong>Siloed Tools</strong>: Endpoint protection, monitoring, and backup run in silosóno unified alerting or response workflow.</li>
 </ul>
 <h3 id="lessons-learned-from-real-projects">Lessons Learned From Real Projects</h3>
 <ul>
-<li>After deploying CA001‚ÄìCA004 Conditional Access policies across 40+ client environments, we see a 90%+ reduction in credential-based attacks.</li>
-<li>Manual patching always fails at scale‚Äîautomated compliance reporting is as important as patch deployment.</li>
-<li>Immutable, offsite backups are the only reliable defense against ransomware‚Äîlocal-only backup is a false sense of security.</li>
-<li>AI-driven monitoring (Defender ATP, Huntress) reduces incident response workload and sharpens detection‚Äîespecially for multi-location dental and healthcare groups.</li>
+<li>After deploying CA001ñCA004 Conditional Access policies across 40+ client environments, we see a 90%+ reduction in credential-based attacks.</li>
+<li>Manual patching always fails at scaleóautomated compliance reporting is as important as patch deployment.</li>
+<li>Immutable, offsite backups are the only reliable defense against ransomwareólocal-only backup is a false sense of security.</li>
+<li>AI-driven monitoring (Defender ATP, Huntress) reduces incident response workload and sharpens detectionóespecially for multi-location dental and healthcare groups.</li>
 </ul>
 <h3 id="what-usually-goes-wrong">What Usually Goes Wrong</h3>
 <ul>
-<li><strong>Unmonitored Gaps</strong>: Conditional Access policies are created, but not enforced or monitored‚Äîleaving silent vulnerabilities.</li>
-<li><strong>Backup Failure Detected Too Late</strong>: No automated test restores‚Äîorganizations only discover backup corruption during an actual crisis.</li>
-<li><strong>Alert Fatigue</strong>: Too many false positives lead admins to ignore real incidents‚Äîespecially in self-managed environments.</li>
-<li><strong>Compliance Drift</strong>: Policies exist but aren‚Äôt mapped to current regulations; evidence is missing during audits.</li>
+<li><strong>Unmonitored Gaps</strong>: Conditional Access policies are created, but not enforced or monitoredóleaving silent vulnerabilities.</li>
+<li><strong>Backup Failure Detected Too Late</strong>: No automated test restoresóorganizations only discover backup corruption during an actual crisis.</li>
+<li><strong>Alert Fatigue</strong>: Too many false positives lead admins to ignore real incidentsóespecially in self-managed environments.</li>
+<li><strong>Compliance Drift</strong>: Policies exist but arenít mapped to current regulations; evidence is missing during audits.</li>
 </ul>
 <h3 id="our-recommendation">Our Recommendation</h3>
 <p>For SMBs and regulated industries, we recommend a managed cybersecurity program with layered automation: enforce MFA + Conditional Access, automate patching and compliance reporting, deploy immutable backup, and centralize monitoring. This approach delivers measurable reductions in downtime, audit prep time, and overall business risk. We rate this model 9/10 for dental, healthcare, and law; 8/10 for manufacturing/accounting.</p>
 <h3 id="when-we-would-not-recommend-this">When We Would NOT Recommend This</h3>
-<p>If your business has mature internal IT with full-time staff, advanced scripting, and dedicated compliance resources, self-managed or co-managed may be viable. However, for organizations under 250 endpoints‚Äîor with compliance requirements‚Äîlack of automation or central monitoring leads to increased risk and higher long-term costs.</p>
+<p>If your business has mature internal IT with full-time staff, advanced scripting, and dedicated compliance resources, self-managed or co-managed may be viable. However, for organizations under 250 endpointsóor with compliance requirementsólack of automation or central monitoring leads to increased risk and higher long-term costs.</p>
 <hr />
 <p><strong>Checklist: Cybersecurity Program Essentials</strong></p>
-<p>‚úì MFA enforced for every user and admin<br />
-‚úì Conditional Access with device compliance<br />
-‚úì Automated patching and compliance reporting<br />
-‚úì Immutable, offsite backup with monthly test restores<br />
-‚úì Quarterly security reviews and DR drills<br />
-‚úì Centralized monitoring (single-pane dashboard)<br />
-‚úì Documented security policies mapped to regulations<br />
-‚úì User awareness training and simulated phishing</p>
+<p>? MFA enforced for every user and admin<br />
+? Conditional Access with device compliance<br />
+? Automated patching and compliance reporting<br />
+? Immutable, offsite backup with monthly test restores<br />
+? Quarterly security reviews and DR drills<br />
+? Centralized monitoring (single-pane dashboard)<br />
+? Documented security policies mapped to regulations<br />
+? User awareness training and simulated phishing</p>
 <hr />
 <h2 id="buyer-focused-guidance">Buyer-Focused Guidance</h2>
 <h3 id="questions-to-ask-before-choosing-a-cybersecurity-approach">Questions to Ask Before Choosing a Cybersecurity Approach</h3>
@@ -4680,13 +4680,13 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <li>Are Conditional Access and device compliance enforced for all users, not just admins?</li>
 <li>Do we have documented, tested DR runbooks with defined RTO and RPO?</li>
 <li>Are our policies mapped to HIPAA, SOX, or other required frameworks?</li>
-<li>Is our monitoring unified, and do we get actionable reports‚Äînot just alerts?</li>
+<li>Is our monitoring unified, and do we get actionable reportsónot just alerts?</li>
 </ul>
 <h3 id="signs-your-current-approach-is-failing">Signs Your Current Approach Is Failing</h3>
 <ul>
-<li>Users are still phished despite ‚Äúsecurity training.‚Äù</li>
+<li>Users are still phished despite ìsecurity training.î</li>
 <li>Patch compliance reports show &lt;90% within 7 days.</li>
-<li>Backups are claimed but never tested‚Äîno evidence of recovery.</li>
+<li>Backups are claimed but never testedóno evidence of recovery.</li>
 <li>Security incidents take hours/days to detect.</li>
 <li>Compliance audits require weeks of manual evidence gathering.</li>
 </ul>
@@ -4717,30 +4717,30 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 </ul>
 <hr />
 <blockquote>
-<p><strong>üì• Free Resource: Cybersecurity Budget &amp; ROI Template</strong></p>
+<p><strong>?? Free Resource: Cybersecurity Budget &amp; ROI Template</strong></p>
 <p>Editable worksheet for planning, tracking, and justifying cybersecurity spend.
-<strong>Includes:</strong> Labor cost calculator ‚Ä¢ Tool comparison grid ‚Ä¢ Risk reduction projection ‚Ä¢ 3-year budget planner<br />
-[Download your copy ‚Üí]</p>
+<strong>Includes:</strong> Labor cost calculator ï Tool comparison grid ï Risk reduction projection ï 3-year budget planner<br />
+[Download your copy ?]</p>
 </blockquote>
 <hr />
 <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 <h3 id="tier-1-beginnerawareness">TIER 1: Beginner/Awareness</h3>
 <h4 id="what-is-cybersecurity-and-why-is-it-business-critical">What is cybersecurity and why is it business-critical?</h4>
-<p>Cybersecurity is the practice of protecting IT systems, data, and users from unauthorized access, breaches, and cyberattacks. For businesses, it‚Äôs essential to prevent costly downtime, data loss, compliance fines, and reputational damage.</p>
+<p>Cybersecurity is the practice of protecting IT systems, data, and users from unauthorized access, breaches, and cyberattacks. For businesses, itís essential to prevent costly downtime, data loss, compliance fines, and reputational damage.</p>
 <h4 id="how-much-does-a-strong-cybersecurity-program-cost">How much does a strong cybersecurity program cost?</h4>
-<p>Typical managed cybersecurity costs range from $600‚Äì$1,200/month for SMBs, or $12‚Äì$20/endpoint/month. Manual, in-house programs often cost 2‚Äì3x more when including labor and incident costs.</p>
+<p>Typical managed cybersecurity costs range from $600ñ$1,200/month for SMBs, or $12ñ$20/endpoint/month. Manual, in-house programs often cost 2ñ3x more when including labor and incident costs.</p>
 <h4 id="what-should-businesses-do-first-to-improve-cybersecurity">What should businesses do first to improve cybersecurity?</h4>
 <p>Start by enforcing MFA for all users, automating patch management, and validating backups with a test restore. These three steps block most common attacks.</p>
 <h4 id="is-cybersecurity-worth-it-for-small-businesses">Is cybersecurity worth it for small businesses?</h4>
-<p>Absolutely‚Äîattackers target small businesses precisely because they‚Äôre perceived as easy targets. The cost of a breach or ransomware incident far exceeds the investment in basic controls.</p>
+<p>Absolutelyóattackers target small businesses precisely because theyíre perceived as easy targets. The cost of a breach or ransomware incident far exceeds the investment in basic controls.</p>
 <h4 id="how-long-does-cybersecurity-implementation-take">How long does cybersecurity implementation take?</h4>
-<p>Quick wins (MFA, patch automation, backup audit) can be implemented in 1‚Äì2 weeks. Full rollout (CA, device compliance, DR drills) takes 1‚Äì3 months, depending on environment size.</p>
+<p>Quick wins (MFA, patch automation, backup audit) can be implemented in 1ñ2 weeks. Full rollout (CA, device compliance, DR drills) takes 1ñ3 months, depending on environment size.</p>
 <h4 id="does-managed-cybersecurity-replace-my-it-staff">Does managed cybersecurity replace my IT staff?</h4>
-<p>No‚Äîmanaged services augment your team, handle routine controls, and provide escalation and compliance support. Internal IT can focus on business projects.</p>
+<p>Noómanaged services augment your team, handle routine controls, and provide escalation and compliance support. Internal IT can focus on business projects.</p>
 <hr />
 <h3 id="tier-2-decisioncomparison">TIER 2: Decision/Comparison</h3>
 <h4 id="how-does-managed-cybersecurity-compare-to-self-managed">How does managed cybersecurity compare to self-managed?</h4>
-<p>Managed services deliver continuous monitoring, automation, and compliance reporting‚Äîmost in-house teams struggle to match this at scale. Managed is 9/10 confidence for SMBs; self-managed only works with deep skill and process maturity.</p>
+<p>Managed services deliver continuous monitoring, automation, and compliance reportingómost in-house teams struggle to match this at scale. Managed is 9/10 confidence for SMBs; self-managed only works with deep skill and process maturity.</p>
 <h4 id="should-every-business-implement-zero-trust">Should every business implement Zero Trust?</h4>
 <p>Yes. Zero Trust is now the baseline for Microsoft, NIST, and CISA. Even small offices benefit from identity-first, always-verified controls.</p>
 <h4 id="what-are-the-biggest-risks-of-weak-cybersecurity">What are the biggest risks of weak cybersecurity?</h4>
@@ -4749,13 +4749,13 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <p>Quarterly: review patch compliance, backup tests, user training, and policy mapping every 3 months. Major reviews ahead of compliance audits.</p>
 <h4 id="what-if-my-environment-is-mostly-cloud-m365-azure">What if my environment is mostly cloud (M365, Azure)?</h4>
 <p>Cloud-centric environments still require MFA, Conditional Access, backup, and device compliance. Native controls are strong, but must be configured and monitored.</p>
-<h4 id="whats-the-difference-between-intune-and-ninjaone-for-endpoint-management">What‚Äôs the difference between Intune and NinjaOne for endpoint management?</h4>
+<h4 id="whats-the-difference-between-intune-and-ninjaone-for-endpoint-management">Whatís the difference between Intune and NinjaOne for endpoint management?</h4>
 <p>Intune is ideal for M365/Entra-centric businesses with compliance needs; NinjaOne is faster to deploy for mixed environments and smaller offices.</p>
 <h4 id="how-do-i-know-if-my-backups-are-truly-secure">How do I know if my backups are truly secure?</h4>
 <p>They must be immutable, offsite, and tested monthly. Manual or local-only backups can be compromised by ransomware.</p>
 <h4 id="what-certifications-should-an-msp-or-it-provider-have">What certifications should an MSP or IT provider have?</h4>
 <p>Look for CompTIA Security+, Network+, CEH, and vendor certifications (Microsoft, Huntress, Bitdefender).</p>
-<h4 id="what-are-the-signs-that-my-msp-isnt-delivering-real-security">What are the signs that my MSP isn‚Äôt delivering real security?</h4>
+<h4 id="what-are-the-signs-that-my-msp-isnt-delivering-real-security">What are the signs that my MSP isnít delivering real security?</h4>
 <p>Missed patch compliance targets, no backup testing evidence, lack of quarterly reviews, and slow incident response.</p>
 <hr />
 <h3 id="tier-3-implementationadvanced">TIER 3: Implementation/Advanced</h3>
@@ -4764,7 +4764,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <h4 id="what-rollback-strategies-work-for-endpoint-ransomware">What rollback strategies work for endpoint ransomware?</h4>
 <p>Leverage Defender ATP or SentinelOne for automated rollback; if not available, restore from immutable backup and re-image compromised devices.</p>
 <h4 id="what-breaks-most-often-during-conditional-access-rollout">What breaks most often during Conditional Access rollout?</h4>
-<p>Legacy authentication (POP/IMAP), unmanaged devices, and incomplete MFA enrollment cause the most user disruption‚Äîpilot with a test group first.</p>
+<p>Legacy authentication (POP/IMAP), unmanaged devices, and incomplete MFA enrollment cause the most user disruptionópilot with a test group first.</p>
 <h4 id="how-do-you-automate-compliance-evidence-for-hipaasoc-2">How do you automate compliance evidence for HIPAA/SOC 2?</h4>
 <p>Centralize logs (Azure Monitor/Sentinel), automate reporting, use policy mapping templates, and schedule quarterly evidence collection.</p>
 <h4 id="what-powershell-scripts-are-essential-for-security-auditing">What PowerShell scripts are essential for security auditing?</h4>
@@ -4772,33 +4772,33 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <h4 id="how-do-you-test-dr-plans-without-disrupting-production">How do you test DR plans without disrupting production?</h4>
 <p>Clone virtual machines or use a sandbox environment; conduct tabletop exercises with documented runbooks; verify RTO/RPO.</p>
 <h4 id="when-should-you-layer-huntress-on-top-of-defender-atp">When should you layer Huntress on top of Defender ATP?</h4>
-<p>For SMBs or distributed environments, Huntress adds managed detection and rapid human response‚Äîespecially valuable for ransomware.</p>
-<h4 id="whats-the-best-way-to-do-simulated-phishing">What‚Äôs the best way to do simulated phishing?</h4>
-<p>Use Defender ATP‚Äôs Attack Simulation Training (M365 E5), or third-party tools like KnowBe4. Run monthly for best results.</p>
+<p>For SMBs or distributed environments, Huntress adds managed detection and rapid human responseóespecially valuable for ransomware.</p>
+<h4 id="whats-the-best-way-to-do-simulated-phishing">Whatís the best way to do simulated phishing?</h4>
+<p>Use Defender ATPís Attack Simulation Training (M365 E5), or third-party tools like KnowBe4. Run monthly for best results.</p>
 <h4 id="how-do-you-secure-multi-site-vpns">How do you secure multi-site VPNs?</h4>
 <p>Enforce IPsec/IKEv2, rotate preshared keys quarterly, monitor via Azure Virtual WAN, and validate failover paths.</p>
 <h4 id="how-do-you-measure-roi-on-cybersecurity-investments">How do you measure ROI on cybersecurity investments?</h4>
-<p>Track hours saved, incidents avoided, regulatory fines prevented, downtime reduction, and insurance premium savings‚Äîcompare against annual spend.</p>
+<p>Track hours saved, incidents avoided, regulatory fines prevented, downtime reduction, and insurance premium savingsócompare against annual spend.</p>
 <hr />
 <h2 id="strategic-conclusion">Strategic Conclusion</h2>
-<p>Cybersecurity is no longer an IT silo‚Äîit‚Äôs the backbone of digital trust, business continuity, and modern competitiveness. In every industry, from dental and law to healthcare and manufacturing, the difference between thriving and struggling is clear: organizations that master cybersecurity don‚Äôt just avoid disaster‚Äîthey unlock operational agility, client confidence, and scalable growth.</p>
-<p>What sets these leaders apart isn‚Äôt just a checklist of tools, but a business-aligned strategy: Zero Trust at the core, automation everywhere, and governance that bridges IT and compliance. AI-driven monitoring, unified dashboards, and proactive testing convert security from a cost center into a business accelerator.</p>
-<p>As cyber threats grow more sophisticated, standing still is the riskiest move you can make. The businesses that win are those that treat cybersecurity as a continuous journey‚Äîmeasured, tested, and optimized every quarter. With the right frameworks, managed IT partnership, and executive buy-in, you transform risk into resilience and compliance into a competitive advantage. That‚Äôs not just protection‚Äîit‚Äôs business modernization.</p>
+<p>Cybersecurity is no longer an IT siloóitís the backbone of digital trust, business continuity, and modern competitiveness. In every industry, from dental and law to healthcare and manufacturing, the difference between thriving and struggling is clear: organizations that master cybersecurity donít just avoid disasteróthey unlock operational agility, client confidence, and scalable growth.</p>
+<p>What sets these leaders apart isnít just a checklist of tools, but a business-aligned strategy: Zero Trust at the core, automation everywhere, and governance that bridges IT and compliance. AI-driven monitoring, unified dashboards, and proactive testing convert security from a cost center into a business accelerator.</p>
+<p>As cyber threats grow more sophisticated, standing still is the riskiest move you can make. The businesses that win are those that treat cybersecurity as a continuous journeyómeasured, tested, and optimized every quarter. With the right frameworks, managed IT partnership, and executive buy-in, you transform risk into resilience and compliance into a competitive advantage. Thatís not just protectionóitís business modernization.</p>
 <hr />
 <h2 id="next-steps">Next Steps</h2>
-<p>Ready to build a cybersecurity program that actually works for your business‚Äînot just for compliance? Here‚Äôs what you‚Äôll get when you engage our team:</p>
-<p>‚úì Comprehensive infrastructure and security audit (15+ criteria, mapped to NIST SP 800-53 and CIS Controls)<br />
-‚úì Cybersecurity Readiness Score‚Ñ¢ and Risk Index‚Ñ¢‚Äîclear, actionable ratings<br />
-‚úì 90-day prioritized action plan (quick wins + long-term roadmap)<br />
-‚úì MFA, Conditional Access, and device compliance deployment<br />
-‚úì Automated patch management and backup verification<br />
-‚úì Immutable, offsite backup and documented DR runbooks<br />
-‚úì Unified monitoring dashboard with executive reports<br />
-‚úì Compliance mapping and evidence collection (HIPAA, SOX, SOC 2)<br />
-‚úì Quarterly review and testing schedule<br />
-‚úì Executive ROI and budget projection for 1‚Äì3 years</p>
+<p>Ready to build a cybersecurity program that actually works for your businessónot just for compliance? Hereís what youíll get when you engage our team:</p>
+<p>? Comprehensive infrastructure and security audit (15+ criteria, mapped to NIST SP 800-53 and CIS Controls)<br />
+? Cybersecurity Readiness Scoreô and Risk Indexôóclear, actionable ratings<br />
+? 90-day prioritized action plan (quick wins + long-term roadmap)<br />
+? MFA, Conditional Access, and device compliance deployment<br />
+? Automated patch management and backup verification<br />
+? Immutable, offsite backup and documented DR runbooks<br />
+? Unified monitoring dashboard with executive reports<br />
+? Compliance mapping and evidence collection (HIPAA, SOX, SOC 2)<br />
+? Quarterly review and testing schedule<br />
+? Executive ROI and budget projection for 1ñ3 years</p>
 <blockquote>
-<p><strong>üìã Free Cybersecurity Readiness Assessment</strong> ‚Äî includes all of the above, delivered by senior engineers‚Äînot sales reps. Actionable, business-aligned, and outcome-focused. [Get your assessment ‚Üí]</p>
+<p><strong>?? Free Cybersecurity Readiness Assessment</strong> ó includes all of the above, delivered by senior engineersónot sales reps. Actionable, business-aligned, and outcome-focused. [Get your assessment ?]</p>
 </blockquote>
 <hr />
 <figure class="article-diagram" role="img" aria-label="A timeline showing the cybersecurity program implementation roadmap divided into four phases, each with specific start dates and durations.">
@@ -4826,19 +4826,19 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <tbody>
 <tr>
 <td>Quick Wins</td>
-<td>Week 1‚Äì2</td>
+<td>Week 1ñ2</td>
 <td>MFA, patch automation, backup audit</td>
 <td>Block 90% of common threats</td>
 </tr>
 <tr>
 <td>Foundation</td>
-<td>Month 1‚Äì2</td>
+<td>Month 1ñ2</td>
 <td>Conditional Access, device compliance, DR testing</td>
 <td>Regulatory compliance, reduced risk</td>
 </tr>
 <tr>
 <td>Optimization</td>
-<td>Month 3‚Äì6</td>
+<td>Month 3ñ6</td>
 <td>Quarterly reviews, AI-driven monitoring</td>
 <td>Incident response &lt;15min, audit-ready</td>
 </tr>
@@ -4850,7 +4850,7 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
 <ul>
 <li>Cybersecurity is a business accelerator, not just a compliance checkbox.</li>
 <li>Proactive, automated, and managed programs deliver measurable ROI and risk reduction.</li>
-<li>Our team delivers a complete, business-aligned roadmap‚Äîtested in real-world environments.</li>
+<li>Our team delivers a complete, business-aligned roadmapótested in real-world environments.</li>
 </ul>
 </blockquote>
 <hr />
@@ -4867,28 +4867,28 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
   <section class="sources-references">
   <h3>Sources & References</h3>
   <ol>
-    <li><a href="https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final" target="_blank" rel="noopener noreferrer">csrc.nist.gov</a> ‚Äî NIST SP 800-53 controls ‚úì</li>
-    <li><a href="https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final" target="_blank" rel="noopener noreferrer">csrc.nist.gov</a> ‚Äî NIST SP 800-171 ‚úì</li>
-    <li><a href="https://cisa.gov/zero-trust-maturity-model" target="_blank" rel="noopener noreferrer">cisa.gov</a> ‚Äî Zero Trust maturity model ‚úì</li>
-    <li><a href="https://csrc.nist.gov/publications/detail/sp/800-34/rev-1/final" target="_blank" rel="noopener noreferrer">csrc.nist.gov</a> ‚Äî NIST SP 800-34 ‚úì</li>
-    <li><a href="https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview" target="_blank" rel="noopener noreferrer">learn.microsoft.com</a> ‚Äî Conditional Access ‚úì</li>
-    <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint" target="_blank" rel="noopener noreferrer">learn.microsoft.com</a> ‚Äî Microsoft Defender for Endpoint ‚úì</li>
-    <li><a href="https://learn.microsoft.com/en-us/microsoft-365/compliance/offering-hipaa-hitech" target="_blank" rel="noopener noreferrer">learn.microsoft.com</a> ‚Äî HIPAA compliance ‚úì</li>
-    <li><a href="https://docs.aws.amazon.com/whitepapers/latest/aws-overview/security-and-compliance.html" target="_blank" rel="noopener noreferrer">docs.aws.amazon.com</a> ‚Äî AWS security and compliance ‚úì</li>
-    <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction" target="_blank" rel="noopener noreferrer">learn.microsoft.com</a> ‚Äî attack surface reduction rules ‚úì</li>
-    <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction" target="_blank" rel="noopener noreferrer">learn.microsoft.com</a> ‚Äî attack surface reduction ‚úì</li>
-    <li><a href="https://www.ibm.com/reports/data-breach" target="_blank" rel="noopener noreferrer">ibm.com</a> ‚Äî average cost of a data breach ‚úì</li>
-    <li><a href="https://www.ibm.com/security/data-breach" target="_blank" rel="noopener noreferrer">ibm.com</a> ‚Äî data breach report ‚úì</li>
+    <li><a href="https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final" target="_blank" rel="noopener noreferrer">csrc.nist.gov</a> ó NIST SP 800-53 controls ?</li>
+    <li><a href="https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final" target="_blank" rel="noopener noreferrer">csrc.nist.gov</a> ó NIST SP 800-171 ?</li>
+    <li><a href="https://cisa.gov/zero-trust-maturity-model" target="_blank" rel="noopener noreferrer">cisa.gov</a> ó Zero Trust maturity model ?</li>
+    <li><a href="https://csrc.nist.gov/publications/detail/sp/800-34/rev-1/final" target="_blank" rel="noopener noreferrer">csrc.nist.gov</a> ó NIST SP 800-34 ?</li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview" target="_blank" rel="noopener noreferrer">learn.microsoft.com</a> ó Conditional Access ?</li>
+    <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint" target="_blank" rel="noopener noreferrer">learn.microsoft.com</a> ó Microsoft Defender for Endpoint ?</li>
+    <li><a href="https://learn.microsoft.com/en-us/microsoft-365/compliance/offering-hipaa-hitech" target="_blank" rel="noopener noreferrer">learn.microsoft.com</a> ó HIPAA compliance ?</li>
+    <li><a href="https://docs.aws.amazon.com/whitepapers/latest/aws-overview/security-and-compliance.html" target="_blank" rel="noopener noreferrer">docs.aws.amazon.com</a> ó AWS security and compliance ?</li>
+    <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction" target="_blank" rel="noopener noreferrer">learn.microsoft.com</a> ó attack surface reduction rules ?</li>
+    <li><a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction" target="_blank" rel="noopener noreferrer">learn.microsoft.com</a> ó attack surface reduction ?</li>
+    <li><a href="https://www.ibm.com/reports/data-breach" target="_blank" rel="noopener noreferrer">ibm.com</a> ó average cost of a data breach ?</li>
+    <li><a href="https://www.ibm.com/security/data-breach" target="_blank" rel="noopener noreferrer">ibm.com</a> ó data breach report ?</li>
   </ol>
 </section>
 </main>
   <footer class="footer"><div class="container"><div class="footer-grid">
-<div><a class='brand' href='/'><img src="https://BuiltByVeterans.ai/assets/img/logo-cropped.png" alt="Built By Veterans" ></a><p>Veteran led. Mission focused.<br>Technology that drives results.</p><div class="footer-social"><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></a><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l6.5 8L4 20h2l5.5-6.8L16 20h4l-6.8-8.4L20 4h-2l-5.2 6.4L8 4H4z"/></svg></a></div></div>
+<div><a class='brand' href='/'><img src="https://BuiltByVeterans.ai/assets/img/logo-cropped.png" alt="Built By Veterans" ></a><p>Veteran led. Mission focused.<br>Technology that drives results.</p><div class="footer-social"><a href="https://www.linkedin.com/company/built-by-veterans" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></a><a href="https://www.facebook.com/BuiltByVeteransIT" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l6.5 8L4 20h2l5.5-6.8L16 20h4l-6.8-8.4L20 4h-2l-5.2 6.4L8 4H4z"/></svg></a></div></div>
 <div><h4>Services</h4><a href='/services#managed-it'>Managed IT</a><a href='/services#cloud'>Cloud Solutions</a><a href='/services#ransomware'>24/7 Ransomware Protection</a><a href='/services#vcio'>vCIO / Strategic IT</a></div>
 <div><h4>Company</h4><a href='/about'>About Us</a><a href='/about#process'>Our Process</a><a href='/contact'>Book a Discovery Call</a></div>
 <div><h4>Resources</h4><a href='/insights'>IT Insights</a><a href='/guides'>Guides</a><a href='/news'>News</a></div>
-<div><h4>Contact</h4><p><a href="tel:+12108304747" style="white-space:nowrap">üìû (210) 830-4747</a></p><p style="white-space:nowrap">üìß info@builtbyveterans.ai</p><p>üìç Texas, USA</p><p>üè¢ Proudly Serving Businesses Across the U.S.</p></div>
-</div><div class="copyright">¬© <span data-year></span> Built By Veterans. All rights reserved.</div></div></footer>
+<div><h4>Contact</h4><p><a href="tel:+12108304747" style="white-space:nowrap">?? (210) 830-4747</a></p><p style="white-space:nowrap">?? info@builtbyveterans.ai</p><p>?? Texas, USA</p><p>?? Proudly Serving Businesses Across the U.S.</p></div>
+</div><div class="copyright">© <span data-year></span> Built By Veterans. All rights reserved.</div></div></footer>
   
   <div class="built-by-veterans">
     <a href="https://BuiltByVeterans.ai"><img src="https://builtbyveterans.ai/assets/img/logo-cropped.png" alt="Managed IT, Cloud &amp; Strategic IT" loading="lazy" /></a>
@@ -4942,10 +4942,10 @@ body:has(.trust-bar):has(.homepage-content) .hero h1 {
     if (scoreEl) scoreEl.textContent = total;
     if (interpEl) {
       var pct = (total / max) * 100;
-      if (pct >= 80) interpEl.textContent = 'Excellent ‚Äî your environment is well-optimized.';
-      else if (pct >= 60) interpEl.textContent = 'Good ‚Äî some areas need attention.';
-      else if (pct >= 40) interpEl.textContent = 'Fair ‚Äî significant improvement opportunities exist.';
-      else interpEl.textContent = 'Critical ‚Äî immediate action recommended. Contact us for an assessment.';
+      if (pct >= 80) interpEl.textContent = 'Excellent ó your environment is well-optimized.';
+      else if (pct >= 60) interpEl.textContent = 'Good ó some areas need attention.';
+      else if (pct >= 40) interpEl.textContent = 'Fair ó significant improvement opportunities exist.';
+      else interpEl.textContent = 'Critical ó immediate action recommended. Contact us for an assessment.';
     }
   }
 
