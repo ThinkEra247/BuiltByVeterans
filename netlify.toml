@@ -1,9 +1,1 @@
-[build]
-  # No build command needed — static site deployed via API
-  # This config just tells Netlify where the functions live
-  # so git-linked deploys can also pick them up
-  functions = "netlify/functions"
-
-[functions]
-  # Single-file JS functions, no bundling needed
-  node_bundler = "esbuild"
+{"id":"/netlify.toml","path":"/netlify.toml","sha":"cafba9cb03c789768ecde9bef5e5b2d2d59518b4","mime_type":"application/octet-stream","size":300,"site_id":"24d62827-070f-41e5-9e85-19eb5aa0e582","deploy_id":"6a5c1cfcd6240a0008dd3227"}

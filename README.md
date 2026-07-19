@@ -1,3 +1,1 @@
-Open services.html. All image assets are in assets/img.
-  
-  
+{"id":"/readme.md","path":"/readme.md","sha":"0c05d69248dadec9004f19d97e6b50a011cae08f","mime_type":"text/markdown","size":62,"site_id":"24d62827-070f-41e5-9e85-19eb5aa0e582","deploy_id":"6a5c1cfcd6240a0008dd3227"}
